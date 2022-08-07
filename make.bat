@@ -27,7 +27,7 @@ if errorlevel 9009 (
 if "%1" == "" goto help
 if "%1" == "sass" goto sass
 
-del %BUILDDIR%\html\index.html
+del %BUILDDIR%\html\index.html >NUL
 %SPHINXBUILD% -M %1 %SOURCEDIR% %BUILDDIR% %SPHINXOPTS% %O%
 goto end
 
@@ -38,7 +38,7 @@ goto end
 
 :sass
 (for %%t in (%SASSTHEMES%) do ( 
-   call sass sass\%%t\main.scss themes\%%t\static\main.css --no-source-map
+   call sass sass\%%t\main.scss sphinx_harumaru_themes\%%t\static\main.css --no-source-map
 ))
 
 :end

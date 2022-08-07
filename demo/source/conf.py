@@ -17,9 +17,7 @@ author = 'DanielSDVG'
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
-extensions = [
-    'haruki_hw_theme',
-]
+extensions = []
 
 templates_path = ['_templates']
 exclude_patterns = []
