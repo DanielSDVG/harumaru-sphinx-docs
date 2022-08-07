@@ -1,0 +1,84 @@
+@use "theme";
+@use "utils";
+
+html {
+  background-color: theme.$background-color;
+  font-family: theme.$font-family-base;
+  font-size: theme.$font-size-base;
+  font-weight: theme.$font-weight-base;
+  line-height: theme.$line-height;
+  color: theme.$text-color;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  padding-top: theme.$navbar-height;
+  flex-direction: column;
+  overflow: hidden scroll;
+}
+
+.container {
+  margin: 0 auto;
+  width: 100%;
+  max-width: theme.$desktop-width;
+}
+
+.page-footer {
+  background-color: theme.$footer-color;
+  margin-top: auto;
+  padding: 1.5rem theme.$main-content-horizontal-padding 3.5rem;
+  text-align: center;
+}
+
+
+// CONTENT
+// =============================================================================
+
+.main-content {
+  padding: theme.$main-content-vertical-padding 0;
+}
+
+.document {
+  width: 100%;
+  padding: 0 theme.$main-content-horizontal-padding;
+}
+
+// SIDEBAR
+// =============================================================================
+
+.sidebar-overlay {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: theme.$sidebar-overlay-color;
+  z-index: theme.$sidebar-zindex;
+  &.hidden {
+    display: none;
+  }
+}
+
+.sidebar {
+  position: absolute;
+  top: theme.$navbar-height;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  max-width: theme.$sidebar-width;
+  padding: theme.$main-content-vertical-padding theme.$main-content-horizontal-padding;
+  border-right: theme.$base-border-width solid theme.$primary-color;
+  background-color: theme.$background-color;
+  overflow: hidden visible;
+
+  > .sidebar-block {
+
+    margin-top: 1.5rem;
+    &:first-child {
+      margin: 0;
+    }
+    
+  }
+
+}

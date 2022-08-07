@@ -1,0 +1,64 @@
+@use "theme";
+@use "utils";
+
+input {
+  min-height: theme.$form-control-min-height;
+  padding: 0 0.5rem;
+  border: theme.$base-border-width solid theme.$primary-color;
+  background-color: theme.$background-color;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  color: theme.$text-color;
+
+  &:focus {
+    position: relative;
+    outline: none;
+    box-shadow: 0 0 0 2px theme.$button-focus-color;
+    z-index: theme.$focus-zindex;
+  }
+}
+
+button, a.button, input[type="reset"], input[type="button"], input[type="submit"] {
+  -webkit-appearance: button;
+  display: flex;
+  align-items: center;
+  min-height: theme.$form-control-min-height;
+  background-color: theme.$button-color;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  color: theme.$button-text-color;
+  padding: 0 theme.$button-padding;
+  border: none;
+  cursor: pointer;
+  @include utils.unselectable();
+
+  &:hover, &:focus {
+    background-color: theme.$button-hover-color;
+    color: theme.$button-hover-text-color;
+    outline: none;
+  }
+
+  > i.fas {
+    width: theme.$button-icon-width;
+    font-size: 150%;
+  }
+
+}
+
+button, a.button {
+  &:focus {
+    position: relative;
+    outline: none;
+    box-shadow: 0 0 0 2px theme.$button-focus-color;
+    z-index: theme.$focus-zindex;
+  }
+}
+
+a.button {
+  color: theme.$text-color;
+  text-decoration: none;
+}

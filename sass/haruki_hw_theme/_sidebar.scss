@@ -1,0 +1,30 @@
+@use "theme";
+@use "utils";
+
+.sidebar > .logo img {
+  display: block;
+  margin: auto;
+}
+
+.sidebar > .sidebar-block {
+
+  > h1, > h2, > h3, > h4, > h5, > h6 {
+    margin-bottom: 0.5rem;
+  }
+
+  ul {
+    margin-top: 0.5rem;
+    list-style-type: square;
+    padding-left: theme.$navbar-ul-padding;
+
+    li::marker {
+      color: theme.$primary-color;
+      font-size: 120%;
+    }
+
+    li + li {
+      margin-top: 0.5rem;
+    }
+  }
+
+}

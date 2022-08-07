@@ -1,0 +1,2 @@
+build==0.8.0
+setuptools==63.2.0

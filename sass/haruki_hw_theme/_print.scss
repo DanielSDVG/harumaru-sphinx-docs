@@ -1,0 +1,18 @@
+@use "theme";
+
+@media print {
+
+  html {
+    background-color: transparent;
+    font-size: theme.$font-size-print;
+  }
+
+  .navbar, .sidebar-overlay, .headerlink, .related, .page-footer {
+    display: none;
+  }
+
+  body, .document, .main-content {
+    padding: 0;
+  }
+
+}

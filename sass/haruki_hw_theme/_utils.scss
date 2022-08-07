@@ -1,0 +1,35 @@
+@use "theme";
+
+@mixin unselectable() {
+  user-select: none;
+}
+
+%bullet-list {
+
+  list-style-type: disc;
+  ul {
+    list-style-type: circle;
+    ul {
+      list-style-type: square;
+    }
+  }
+
+  padding-left: theme.$ul-ol-padding;
+  > li {
+    margin-top: theme.$subcontent-margin;
+  }
+
+}
+
+%number-list {
+
+  padding-left: theme.$ul-ol-padding;
+  > li {
+    margin-top: theme.$subcontent-margin;
+  }
+  
+}
+
+dd > %bullet-list, dd > %number-list {
+  padding-left: 0;
+}

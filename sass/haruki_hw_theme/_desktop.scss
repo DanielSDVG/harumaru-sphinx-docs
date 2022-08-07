@@ -1,0 +1,44 @@
+@use "theme";
+
+@media screen and (min-width: theme.$desktop-width) {
+
+  // CONTENT
+  // ===========================================================================
+
+  .main-content {
+    display: flex;
+    width: theme.$content-width;
+
+    > div {
+      flex: none;
+    }
+  }
+
+  // SIDEBAR
+  // ===========================================================================
+
+  .sidebar-overlay {
+    position: static;
+    background-color: transparent;
+    
+    &.hidden {
+      display: block;
+    }
+  }
+
+  .sidebar {
+    position: static;
+    width: theme.$sidebar-width;
+    height: 100%;
+    padding: 0 theme.$main-content-horizontal-padding;
+    overflow: hidden;
+  }
+
+  // NAVBAR
+  // ===========================================================================
+
+  .sidebar-toggler {
+    display: none;
+  }
+  
+}
