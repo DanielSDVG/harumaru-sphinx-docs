@@ -1,16 +1,2 @@
-@use "../_utils/minireset";
-
-// Documentation document styling
-@use "document";
-
-// General form element styles
-@use "forms";
-
-// Navbar and sidebar content
-@use "navbar";
-@use "sidebar";
-
-// Layout for different media
-@use "mobile";
-@use "desktop";
-@use "print";
+@use "theme.scss";
+@use "../_handwritten_themes/main.scss"

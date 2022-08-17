@@ -1,0 +1,113 @@
+// FONTS
+// =============================================================================
+
+$font-family-base: "Short Stack", sans-serif;
+$font-size-base: 14px;
+$font-weight-base: normal;
+$line-height: 1.5;
+
+$font-weight-bold: bolder;
+
+$font-family-mono: 'Consolas', 'Courier New', Courier, monospace;
+$font-size-mono: 100%;
+
+$font-size-print: 12px;
+
+$font-family-headings: "Modern Love", sans-serif;
+$font-weight-headings: normal;
+$font-sizes-headings: 175%, 150%, 140%, 130%, 120%, 110%;
+
+// COLORS
+// =============================================================================
+
+$background-color: rgb(255, 255, 255);
+$footer-color: rgb(205, 232, 255);
+
+$primary-color: rgb(67, 192, 255);
+$secondary-color: rgb(160, 47, 253);
+$tertiary-color: rgb(255, 121, 249);
+$success-color: hsl(147, 100%, 42%);
+$warning-color: rgb(255, 192, 0);
+$danger-color: rgb(255, 91, 91);
+
+$primary-color-lighter: rgb(154, 221, 255);
+$note-color: rgb(225, 241, 255);
+$success-bg-color: hsl(147, 100%, 94%);
+$warning-bg-color: rgb(255, 245, 225);
+$danger-bg-color: rgb(255, 225, 225);
+
+$text-color: rgb(0, 2, 36);
+$link-color: rgb(32, 84, 255);
+$visited-color: rgb(166, 32, 255);
+$selection-color: rgba(67, 192, 255, 0.233);
+$sidebar-overlay-color: rgba(67, 192, 255, 0.788);
+
+$button-color: rgb(120, 210, 255);
+$button-text-color: $text-color;
+$button-hover-color: $primary-color;
+$button-hover-text-color: $text-color;
+$button-focus-color: rgb(157, 222, 255);
+$navbar-hover-color: rgb(218, 243, 255);
+
+$code-background-color: transparent;
+$code-text-color: rgb(255, 64, 105);
+$definition-color: rgb(160, 47, 253);
+
+$toctree-bullet-colors:
+  $primary-color, $secondary-color, $tertiary-color,
+  $success-color, $warning-color, $danger-color;
+
+// SIZES
+// =============================================================================
+
+
+
+// Layout
+// ------
+
+$navbar-height: 48px;
+$navbar-background-color: rgb(66, 167, 255);
+$navbar-ul-padding: 1rem;
+
+$sidebar-width: 270px;
+$content-width: 810px;
+$desktop-width: $sidebar-width + $content-width;
+
+$main-content-vertical-padding: 1.5rem;
+$main-content-horizontal-padding: 1.5rem;
+
+
+// General
+// -------
+
+$base-border-width: 1px;
+
+$form-control-min-height: 36px;
+$button-padding: 1rem;
+$button-icon-width: 20px;
+
+$searchbox-padding: 5px;
+
+
+// Document content
+// ----------------
+
+$section-margin: 2.5rem;
+$content-margin: 1rem;
+$subcontent-margin: 0.5rem;
+
+$ul-ol-padding: 2rem;
+
+$code-block-padding: 0.5rem;
+$blockquote-padding: 1rem;
+$blockquote-horizontal-margin: 2rem;
+
+$table-cell-padding: 0.5rem 1rem;
+
+
+// Z-index setup
+// -------------
+
+$navbar-zindex: 100;
+$sidebar-zindex: 50;
+$focus-zindex: 150;
