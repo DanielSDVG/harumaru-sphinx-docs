@@ -16,6 +16,16 @@
             "type": "shell",
             "command": "twine upload dist/*",
             "group": "build",
+        }, {
+            "label": "Transpile Sass",
+            "type": "shell",
+            "command": "make sass",
+            "group": "build",
+        }, {
+            "label": "Build demo documentation",
+            "type": "shell",
+            "command": "make html",
+            "group": "build",
         }
     ]
 }
