@@ -31,6 +31,11 @@
             "type": "shell",
             "command": "start \"\" ${workspaceFolder}\\demo\\build\\html\\index.html",
             "group": "build",
+        }, {
+            "label": "Transpile and build all",
+            "type": "shell",
+            "command": ".vscode\\build_all",
+            "group": "build",
         }
     ]
 }

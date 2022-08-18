@@ -1,0 +1,25 @@
+@use "bootstrap/variables.scss" as v;
+@import "../../bootstrap/scss/functions";
+@import "../../bootstrap/scss/variables";
+@import "../../bootstrap/scss/mixins";
+
+#navbar {
+  background-color: v.$body-bg;
+}
+
+#main-container {
+  margin-top: $navbar-brand-height
+    + 2 * ($navbar-brand-padding-y + $navbar-padding-y);
+}
+
+#sidebar-container {
+  width: 300px;
+}
+
+#sidebar-offcanvas {
+  visibility: visible;
+}
+
+#page-footer {
+  background-color: v.$primary-100;
+}

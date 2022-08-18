@@ -11935,3 +11935,23 @@ mark, .mark {
 .table.table-dark > :not(:first-child) {
   border-top-color: currentColor;
 }
+
+#navbar {
+  background-color: #fff;
+}
+
+#main-container {
+  margin-top: 3.5rem;
+}
+
+#sidebar-container {
+  width: 300px;
+}
+
+#sidebar-offcanvas {
+  visibility: visible;
+}
+
+#page-footer {
+  background-color: #d7f4ff;
+}
