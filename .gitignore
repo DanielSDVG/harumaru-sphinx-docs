@@ -153,3 +153,4 @@ dmypy.json
 cython_debug/
 
 demo/build
+sass/bootstrap

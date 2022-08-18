@@ -14,5 +14,5 @@ Installation from PyPI is fairly straightforward:
 
 2. Edit the ``conf.py`` configuration file to point to the theme::
 
-      html_theme = 'haruki_hw'
+      html_theme = 'haruki_light'
 

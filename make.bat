@@ -9,7 +9,6 @@ if "%SPHINXBUILD%" == "" (
 )
 set SOURCEDIR=demo\source
 set BUILDDIR=demo\build
-set SASSTHEMES=haruki_hw_theme
 
 %SPHINXBUILD% >NUL 2>NUL
 if errorlevel 9009 (
@@ -25,7 +24,6 @@ if errorlevel 9009 (
 )
 
 if "%1" == "" goto help
-if "%1" == "sass" goto sass
 
 rmdir /s /q %BUILDDIR%\html >NUL 2>NUL
 %SPHINXBUILD% -M %1 %SOURCEDIR% %BUILDDIR% %SPHINXOPTS% %O%
@@ -33,13 +31,6 @@ goto end
 
 :help
 %SPHINXBUILD% -M help %SOURCEDIR% %BUILDDIR% %SPHINXOPTS% %O%
-
-goto end
-
-:sass
-(for %%t in (%SASSTHEMES%) do ( 
-   call sass sass\%%t\main.scss sphinx_harumaru_themes\%%t\static\main.css --no-source-map
-))
 
 :end
 popd

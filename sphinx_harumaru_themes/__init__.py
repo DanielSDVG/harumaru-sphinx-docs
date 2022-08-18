@@ -2,6 +2,7 @@ from os import path
 
 
 themes = [
+    'haruki_light',
     'haruki_hw',
 ]
 

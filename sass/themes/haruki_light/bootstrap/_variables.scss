@@ -1,0 +1,446 @@
+@import "../../../bootstrap/scss/functions.scss";
+
+// Base colors
+// =============================================================================
+
+$cyan:          #39c7ff;
+$blue:          #2d4bff;
+$indigo:        #5c2ffd;
+$purple:        #a02ffd;
+$pink:          #ff86f9;
+$green:         #12b14f;
+$yellow:        #ffc000;
+$orange:        #ff9933;
+$red:           #ff5b5b;
+
+$white:         #fff;
+$gray-100:      #f1f1f1;
+$gray-200:      #eeeeee;
+$gray-300:      #d8d8d8;
+$gray-400:      #bfbfbf;
+$gray-500:      #a9a9a9;
+$gray-600:      #888888;
+$gray-700:      #5b5b5b;
+$gray-800:      #424242;
+$gray-900:      #2a2a2a;
+$black:         #000;
+
+$primary:       $cyan;
+$secondary:     $pink;
+$success:       $green;
+$danger:        $red;
+$warning:       $yellow;
+$info:          $purple;
+$light:         $gray-100;
+$dark:          $gray-900;
+
+$primary-dark:  #2d8bff;
+
+
+// Color variations
+// =============================================================================
+
+$primary-700:   shade-color($primary, 40%);
+
+$primary-400:   tint-color($primary, 20%);
+$primary-300:   tint-color($primary, 40%);
+$primary-200:   tint-color($primary, 60%);
+$primary-150:   tint-color($primary, 70%);
+$primary-100:   tint-color($primary, 80%);
+$primary-50:    tint-color($primary, 90%);
+
+$secondary-700:   shade-color($secondary, 40%);
+
+$secondary-400:   tint-color($secondary, 20%);
+$secondary-300:   tint-color($secondary, 40%);
+$secondary-200:   tint-color($secondary, 60%);
+$secondary-150:   tint-color($secondary, 70%);
+$secondary-100:   tint-color($secondary, 80%);
+$secondary-50:    tint-color($secondary, 90%);
+
+$success-700:   shade-color($success, 40%);
+
+$success-400:   tint-color($success, 20%);
+$success-300:   tint-color($success, 40%);
+$success-200:   tint-color($success, 60%);
+$success-150:   tint-color($success, 70%);
+$success-100:   tint-color($success, 80%);
+$success-50:    tint-color($success, 90%);
+
+$danger-700:   shade-color($danger, 40%);
+
+$danger-400:   tint-color($danger, 20%);
+$danger-300:   tint-color($danger, 40%);
+$danger-200:   tint-color($danger, 60%);
+$danger-150:   tint-color($danger, 70%);
+$danger-100:   tint-color($danger, 80%);
+$danger-50:    tint-color($danger, 90%);
+
+$warning-700:   shade-color($warning, 40%);
+
+$warning-400:   tint-color($warning, 20%);
+$warning-300:   tint-color($warning, 40%);
+$warning-200:   tint-color($warning, 60%);
+$warning-150:   tint-color($warning, 70%);
+$warning-100:   tint-color($warning, 80%);
+$warning-50:    tint-color($warning, 90%);
+
+$info-700:   shade-color($info, 40%);
+
+$info-400:   tint-color($info, 20%);
+$info-300:   tint-color($info, 40%);
+$info-200:   tint-color($info, 60%);
+$info-150:   tint-color($info, 70%);
+$info-100:   tint-color($info, 80%);
+$info-50:    tint-color($info, 90%);
+
+$light-300:   tint-color($light, 40%);
+$light-200:   tint-color($light, 60%);
+$light-100:   tint-color($light, 80%);
+
+$dark-300:   tint-color($dark, 40%);
+$dark-200:   tint-color($dark, 60%);
+$dark-100:   tint-color($dark, 80%);
+
+
+$primary-dark-800:   shade-color($primary-dark, 60%);
+$primary-dark-700:   shade-color($primary-dark, 40%);
+
+
+// General styles
+// =============================================================================
+
+$body-bg:                 $white;
+$body-color:              $gray-900;
+$link-color:              $blue;
+$link-shade-percentage:   20%;
+$link-hover-color:        shift-color($link-color, $link-shade-percentage);
+$code-color:              $red;
+$text-muted:              $gray-600;
+
+$border-color:            $primary-300;
+
+$box-shadow:              0 .5rem 1rem rgba($border-color, 0.3);
+$box-shadow-sm:           0 .125rem .25rem rgba($border-color, 0.15);
+$box-shadow-lg:           0 1rem 3rem rgba($border-color, 0.35);
+$box-shadow-inset:        inset 0 1px 2px rgba($border-color, 0.15);
+
+$component-active-color:  $black;
+$component-active-bg:     $primary-300;
+
+$font-family-sans-serif: "Nunito", system-ui, -apple-system, "Segoe UI",
+  Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
+  "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+$mark-padding: 0;
+$mark-bg: rgba(255, 238, 0, 0.3);
+
+$hr-color: $primary;
+$hr-opacity: 0.5;
+
+$text-muted: $gray-600;
+$blockquote-footer-color: $text-muted;
+
+$disabled-color: $gray-500;
+
+
+// Accordion
+// =============================================================================
+
+$accordion-button-active-bg:      $primary-100;
+$accordion-border-color:          $border-color;
+$accordion-button-active-color:   $primary-700;
+
+
+// Alerts
+// =============================================================================
+
+$alert-bg-scale:                -80%;
+$alert-border-scale:            -70%;
+$alert-color-scale:             40%;
+
+
+// Badge
+// =============================================================================
+
+$badge-color: $white;
+
+
+// Breadcrumb
+// =============================================================================
+
+$breadcrumb-divider-color:      $primary;
+$breadcrumb-active-color:       $text-muted;
+
+
+// Button
+// =============================================================================
+
+$button-colors: (
+  "primary": (
+    "bg": $primary-300,
+    "color": $black,
+    "border": $primary
+  ),
+  "secondary": (
+    "bg": $secondary-300,
+    "color": $black,
+    "border": $secondary
+  ),
+  "success": (
+    "bg": $success-300,
+    "color": $black,
+    "border": $success
+  ),
+  "danger": (
+    "bg": $danger-300,
+    "color": $black,
+    "border": $danger
+  ),
+  "warning": (
+    "bg": $warning-300,
+    "color": $black,
+    "border": $warning
+  ),
+  "info": (
+    "bg": $info-300,
+    "color": $black,
+    "border": $info
+  ),
+  "light": (
+    "bg": $light-300,
+    "color": $black,
+    "border": $light
+  ),
+  "dark": (
+    "bg": $dark-300,
+    "color": $white,
+    "border": $dark
+  ),
+);
+
+$btn-hover-bg-shift-amount:     -15%;
+$btn-active-bg-shift-amount:    -25%;
+
+
+// Cards
+// =============================================================================
+
+$card-colors: (
+  "primary": (
+    "headerbg": $primary-200,
+    "bg": $primary-100,
+    "outline": $primary
+  ),
+  "secondary": (
+    "headerbg": $secondary-200,
+    "bg": $secondary-100,
+    "outline": $secondary
+  ),
+  "success": (
+    "headerbg": $success-200,
+    "bg": $success-100,
+    "outline": $success
+  ),
+  "danger": (
+    "headerbg": $danger-200,
+    "bg": $danger-100,
+    "outline": $danger
+  ),
+  "warning": (
+    "headerbg": $warning-200,
+    "bg": $warning-100,
+    "outline": $warning
+  ),
+  "info": (
+    "headerbg": $info-200,
+    "bg": $info-100,
+    "outline": $info
+  ),
+  "light": (
+    "headerbg": $light-200,
+    "bg": $light-100,
+    "outline": $light
+  ),
+  "dark": (
+    "headerbg": $dark-200,
+    "bg": $dark-100,
+    "outline": $dark
+  ),
+);
+$card-border-color:                         $border-color;
+$card-cap-bg:                               $primary-50;
+$card-bg:                                   $body-bg;
+
+
+// Dropdown
+// =============================================================================
+
+$dropdown-bg:                               $body-bg;
+$dropdown-color:                            $body-color;
+$dropdown-border-color:                     $primary;
+$dropdown-divider-bg:                       $dropdown-border-color;
+$dropdown-link-color:                       $gray-900;
+$dropdown-link-hover-bg:                    $primary-100;
+$dropdown-link-active-bg:                   $primary-200;
+$dropdown-link-active-color:                $component-active-color;
+$dropdown-link-disabled-color:              $disabled-color;
+
+$dropdown-dark-bg:                          #0e0e0e;
+$dropdown-dark-color:                       $gray-100;
+$dropdown-dark-border-color:                $primary-dark;
+$dropdown-dark-divider-bg:                  $primary-dark;
+$dropdown-dark-link-hover-bg:               $primary-dark-800;
+$dropdown-dark-link-active-color:           $white;
+$dropdown-dark-link-active-bg:              $primary-dark-700;
+
+
+// Forms
+// =============================================================================
+
+$input-bg:                                  $body-bg;
+$input-color:                               $body-color;
+$input-disabled-bg:                         $gray-200;
+$input-border-color:                        $border-color;
+$input-placeholder-color:                   $gray-600;
+$input-focus-border-color:                  $primary-200;
+
+$form-text-color:                           $text-muted;
+
+$form-check-input-border:                   1px solid $border-color;
+$form-switch-color:                         $border-color;
+$form-check-input-checked-bg-color:         $primary-300;
+$form-check-input-indeterminate-bg-color:   $primary-300;
+
+$form-range-track-bg:                       $primary-100;
+$form-range-thumb-bg:                       $primary;
+$form-range-thumb-active-bg:                $primary-700;
+$form-range-thumb-disabled-bg:              $gray-500;
+
+$input-group-addon-color:                   $primary-700;
+$input-group-addon-bg:                      $primary-50;
+
+$form-file-button-color:                    $primary-700;
+$form-file-button-bg:                       $primary-50;
+$form-file-button-hover-bg:                 $primary-100;
+
+
+// List groups
+// =============================================================================
+
+$list-group-bg:                             $body-bg;
+$list-group-color:                          $body-color;
+$list-group-border-color:                   $border-color;
+$list-group-hover-bg:                       $primary-150;
+$list-group-disabled-color:                 $disabled-color;
+
+$list-group-action-color:                   $body-color;
+$list-group-action-hover-color:             $list-group-action-color;
+$list-group-action-active-color:            $body-color;
+$list-group-action-active-bg:               $primary-200;
+
+$list-group-colors: (
+  "primary": (
+    "bg": $primary-100,
+    "color": $primary-700,
+  ),
+  "secondary": (
+    "bg": $secondary-100,
+    "color": $secondary-700,
+  ),
+  "success": (
+    "bg": $success-100,
+    "color": $success-700,
+  ),
+  "danger": (
+    "bg": $danger-100,
+    "color": $danger-700,
+  ),
+  "warning": (
+    "bg": $warning-100,
+    "color": $warning-700,
+  ),
+  "info": (
+    "bg": $info-100,
+    "color": $info-700,
+  ),
+  "light": (
+    "bg": $light-100,
+    "color": $black,
+  ),
+  "dark": (
+    "bg": $dark-100,
+    "color": $black,
+  ),
+);
+
+
+// Modals & Offcanvases
+// =============================================================================
+$modal-content-bg:                          $body-bg;
+$modal-content-color:                       $body-color;
+$modal-content-border-color:                $border-color;
+
+
+// Pagination
+// =============================================================================
+
+$pagination-bg:                             $body-bg;
+$pagination-border-color:                   $border-color;
+$pagination-hover-bg:                       $primary-150;
+$pagination-hover-border-color:             $border-color;
+$pagination-focus-bg:                       $pagination-hover-bg;
+$pagination-active-bg:                      $border-color;
+$pagination-disabled-bg:                    $gray-200;
+$pagination-disabled-color:                 $disabled-color;
+$pagination-disabled-border-color:          $border-color;
+
+
+// Navs & Tabs
+// =============================================================================
+
+$nav-tabs-border-color:                     $border-color;
+$nav-tabs-link-hover-border-color:          $border-color;
+$nav-tabs-link-active-bg:                   $body-bg;
+$nav-tabs-link-active-border-color:
+  $border-color $border-color $nav-tabs-link-active-bg;
+$nav-tabs-link-active-color:                $body-color;
+$nav-link-disabled-color:                   $disabled-color;
+
+
+$navbar-light-bg:                           $primary-100;
+$navbar-dark-bg:                            $gray-900;
+
+
+// Progress
+// =============================================================================
+
+$progress-bg:                               $gray-200;
+
+
+// Popovers
+// =============================================================================
+
+$popover-bg:                                $body-bg;
+$popover-border-color:                      $border-color;
+$popover-header-bg:                         rgba($primary, 10%);
+$popover-body-padding-y:                    .5rem;
+
+
+// Tables
+// =============================================================================
+
+$table-border-color:                        $border-color;
+$table-group-separator-color:               $primary;
+$table-striped-bg:                          rgba($primary, 10%);
+$table-bg-scale:                            -80%;
+
+
+// Toasts
+// =============================================================================
+
+$toast-background-color:                    rgba($body-bg, 0.85);
+$toast-border-color:                        $border-color;
+$toast-header-color:                        $body-color;
+$toast-header-background-color:             $primary-100;
+$toast-header-border-color:                 $border-color;

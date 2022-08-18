@@ -19,12 +19,17 @@
         }, {
             "label": "Transpile Sass",
             "type": "shell",
-            "command": "make sass",
+            "command": ".vscode\\compile_sass",
             "group": "build",
         }, {
             "label": "Build demo documentation",
             "type": "shell",
-            "command": "make html",
+            "command": "venv\\scripts\\activate && make html",
+            "group": "build",
+        }, {
+            "label": "Open demo documentation",
+            "type": "shell",
+            "command": "start \"\" ${workspaceFolder}\\demo\\build\\html\\index.html",
             "group": "build",
         }
     ]
