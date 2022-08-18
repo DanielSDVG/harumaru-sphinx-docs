@@ -1,0 +1,6 @@
+@use "../_utils/fontfaces.scss";
+@use "theme";
+
+@each $props in theme.$font-face-properties {
+  @include fontfaces.font-face($props, theme.$font-face-base-url);
+}

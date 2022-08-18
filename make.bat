@@ -27,7 +27,7 @@ if errorlevel 9009 (
 if "%1" == "" goto help
 if "%1" == "sass" goto sass
 
-del %BUILDDIR%\html\index.html >NUL
+rmdir /s /q %BUILDDIR%\html >NUL 2>NUL
 %SPHINXBUILD% -M %1 %SOURCEDIR% %BUILDDIR% %SPHINXOPTS% %O%
 goto end
 

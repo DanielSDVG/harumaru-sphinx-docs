@@ -1,7 +1,10 @@
 // FONTS
 // =============================================================================
 
-$font-family-base: "Short Stack", sans-serif;
+$font-face-properties: () !default;
+$font-face-base-url: "" !default;
+
+$font-family-base: sans-serif !default;
 $font-size-base: 14px;
 $font-weight-base: normal;
 $line-height: 1.5;

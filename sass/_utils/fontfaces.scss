@@ -1,0 +1,77 @@
+@use "sass:map";
+
+
+/// Generates a @font-face rule.
+/// @param {map} $properties
+///     A map which contains the different parameters for the
+///     @font-face rule. This map may have the following keys:
+///     @prop {string} family - the value of the font-family
+///         property. Required.
+///     @prop {string} weight - the value of the font-weight
+///         property. Defaults to normal.
+///     @prop {string} style - the value of the font-style
+///         property. Defaults to normal.
+///     @prop {string} display - the value of the font-display
+///         property. Defaults to auto.
+///     @prop {string} eot - URL to the .eot font file to use.
+///     @prop {string} woff - URL to the .woff font file to use.
+///     @prop {string} woff2 - URL to the .woff2 font file to use.
+///     @prop {string} ttf - URL to the .ttf font file to use.
+///     @prop {string} svg - URL to the .svg font file to use.
+/// @param {string} $base-url
+///     A string to be used as a prefix to all URLs specified in
+///     `$properties`.
+/// @throw The family name is not specified.
+@mixin font-face($properties, $base-url: "") {
+  
+    $weight: normal;
+    $style: normal;
+    $src: null;
+    $display: auto;
+    
+    @if not map.has-key($properties, "family") {
+        @error "Family name not specified.";
+    }
+    
+    @if map.has-key($properties, "weight") {
+        $weight: map.get($properties, "weight");
+    }
+    
+    @if map.has-key($properties, "style") {
+        $style: map.get($properties, "style");
+    }
+    @if map.has-key($properties, "display") {
+        $display: map.get($properties, "display");
+    }
+    
+    // Add sources for different formats
+    @if map.has-key($properties, "eot") {
+        $url: $base-url + "/" + map.get($properties, "eot");
+        $src: $src, url($url);
+        $src: $src, url("#{$url}?#iefix") format("embedded-opentype");
+    }
+    @if map.has-key($properties, "woff") {
+        $url: $base-url + "/" + map.get($properties, "woff");
+        $src: $src, url($url) format("woff");
+    }
+    @if map.has-key($properties, "woff2") {
+        $url: $base-url + "/" + map.get($properties, "woff2");
+        $src: $src, url($url) format("woff2");
+    }
+    @if map.has-key($properties, "ttf") {
+        $url: $base-url + "/" + map.get($properties, "ttf");
+        $src: $src, url($url) format("truetype");
+    }
+    @if map.has-key($properties, "svg") {
+        $url: $base-url + "/" + map.get($properties, "svg");
+        $src: $src, url($url) format("svg");
+    }
+    
+    @font-face {
+      font-family: map.get($properties, "family");
+      font-weight: $weight;
+      font-style: $style;
+      src: $src;
+    }
+    
+}

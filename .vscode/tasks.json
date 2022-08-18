@@ -1,0 +1,21 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Clean",
+            "type": "shell",
+            "command": "venv\\scripts\\activate && .vscode\\clean",
+            "group": "build",
+        }, {
+            "label": "Clean, build, sdist & install",
+            "type": "shell",
+            "command": "venv\\scripts\\activate && .vscode\\clean && python setup.py build sdist install",
+            "group": "build",
+        }, {
+            "label": "Upload to PyPI",
+            "type": "shell",
+            "command": "twine upload dist/*",
+            "group": "build",
+        }
+    ]
+}

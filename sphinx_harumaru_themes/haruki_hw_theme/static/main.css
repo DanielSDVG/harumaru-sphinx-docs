@@ -74,6 +74,30 @@ th {
   padding: 0;
 }
 
+@font-face {
+  font-family: "Short Stack Ext";
+  font-weight: normal;
+  font-style: normal;
+  src: url("fonts/shortstack-ext/shortstack-ext.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Short Stack Ext";
+  font-weight: normal;
+  font-style: italic;
+  src: url("fonts/shortstack-ext/shortstack-ext-i.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Short Stack Ext";
+  font-weight: bold;
+  font-style: normal;
+  src: url("fonts/shortstack-ext/shortstack-ext-b.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Short Stack Ext";
+  font-weight: bold;
+  font-style: italic;
+  src: url("fonts/shortstack-ext/shortstack-ext-bi.ttf") format("truetype");
+}
 .body ul {
   list-style-type: disc;
   padding-left: 2rem;
@@ -516,7 +540,7 @@ a.button {
 
 html {
   background-color: white;
-  font-family: "Short Stack", sans-serif;
+  font-family: "Short Stack Ext", "Short Stack", sans-serif;
   font-size: 14px;
   font-weight: normal;
   line-height: 1.5;
