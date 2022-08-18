@@ -11936,6 +11936,12 @@ mark, .mark {
   border-top-color: currentColor;
 }
 
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
 #navbar {
   background-color: #fff;
 }
@@ -11953,5 +11959,6 @@ mark, .mark {
 }
 
 #page-footer {
+  margin-top: auto;
   background-color: #d7f4ff;
 }

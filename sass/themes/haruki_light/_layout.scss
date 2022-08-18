@@ -3,6 +3,12 @@
 @import "../../bootstrap/scss/variables";
 @import "../../bootstrap/scss/mixins";
 
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
 #navbar {
   background-color: v.$body-bg;
 }
@@ -21,5 +27,6 @@
 }
 
 #page-footer {
+  margin-top: auto;
   background-color: v.$primary-100;
 }
