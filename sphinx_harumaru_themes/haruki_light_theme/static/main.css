@@ -11942,54 +11942,127 @@ mark, .mark {
 .body > section {
   margin-top: 0;
 }
-.body p, .body h1, .body h2, .body h3, .body h4, .body h5, .body h6, .body ul, .body ol, .body dd, .body table, .body .math, .body admonition {
+
+.body section > :not(:last-child) {
+  display: block;
   margin-bottom: 1rem;
 }
-.body p:last-child, .body h1:last-child, .body h2:last-child, .body h3:last-child, .body h4:last-child, .body h5:last-child, .body h6:last-child, .body ul:last-child, .body ol:last-child, .body dd:last-child, .body table:last-child, .body .math:last-child, .body admonition:last-child {
+.body section > :last-child {
+  display: block;
   margin-bottom: 0;
-}
-.body h1 {
-  margin-bottom: 2rem;
-}
-.body li p, .body li h1, .body li h2, .body li h3, .body li h4, .body li h5, .body li h6, .body li ul, .body li ol, .body li dd, .body li table, .body li .math, .body li admonition, .body dd p, .body dd h1, .body dd h2, .body dd h3, .body dd h4, .body dd h5, .body dd h6, .body dd ul, .body dd ol, .body dd dd, .body dd table, .body dd .math, .body dd admonition, .body th p, .body th h1, .body th h2, .body th h3, .body th h4, .body th h5, .body th h6, .body th ul, .body th ol, .body th dd, .body th table, .body th .math, .body th admonition, .body td p, .body td h1, .body td h2, .body td h3, .body td h4, .body td h5, .body td h6, .body td ul, .body td ol, .body td dd, .body td table, .body td .math, .body td admonition, .body .admonition p, .body .admonition h1, .body .admonition h2, .body .admonition h3, .body .admonition h4, .body .admonition h5, .body .admonition h6, .body .admonition ul, .body .admonition ol, .body .admonition dd, .body .admonition table, .body .admonition .math, .body .admonition admonition {
-  margin-bottom: 0.5rem;
-}
-.body li p:last-child, .body li h1:last-child, .body li h2:last-child, .body li h3:last-child, .body li h4:last-child, .body li h5:last-child, .body li h6:last-child, .body li ul:last-child, .body li ol:last-child, .body li dd:last-child, .body li table:last-child, .body li .math:last-child, .body li admonition:last-child, .body dd p:last-child, .body dd h1:last-child, .body dd h2:last-child, .body dd h3:last-child, .body dd h4:last-child, .body dd h5:last-child, .body dd h6:last-child, .body dd ul:last-child, .body dd ol:last-child, .body dd dd:last-child, .body dd table:last-child, .body dd .math:last-child, .body dd admonition:last-child, .body th p:last-child, .body th h1:last-child, .body th h2:last-child, .body th h3:last-child, .body th h4:last-child, .body th h5:last-child, .body th h6:last-child, .body th ul:last-child, .body th ol:last-child, .body th dd:last-child, .body th table:last-child, .body th .math:last-child, .body th admonition:last-child, .body td p:last-child, .body td h1:last-child, .body td h2:last-child, .body td h3:last-child, .body td h4:last-child, .body td h5:last-child, .body td h6:last-child, .body td ul:last-child, .body td ol:last-child, .body td dd:last-child, .body td table:last-child, .body td .math:last-child, .body td admonition:last-child, .body .admonition p:last-child, .body .admonition h1:last-child, .body .admonition h2:last-child, .body .admonition h3:last-child, .body .admonition h4:last-child, .body .admonition h5:last-child, .body .admonition h6:last-child, .body .admonition ul:last-child, .body .admonition ol:last-child, .body .admonition dd:last-child, .body .admonition table:last-child, .body .admonition .math:last-child, .body .admonition admonition:last-child {
-  margin-bottom: 0;
-}
-.body li, .body dt, .body dd, .body th, .body td {
-  margin-bottom: 0.5rem;
-}
-.body li:last-child, .body dt:last-child, .body dd:last-child, .body th:last-child, .body td:last-child {
-  margin-bottom: 0;
-}
-.body ul, .body ol, .body dd {
-  padding-left: 2rem;
-}
-.body dd > ul:only-child, .body dd > ol:only-child {
-  padding-left: 0;
 }
 
-table.docutils {
+.body li > :not(:last-child) {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+.body li > :last-child {
+  display: block;
+  margin-bottom: 0;
+}
+
+.body dd > :not(:last-child) {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+.body dd > :last-child {
+  display: block;
+  margin-bottom: 0;
+}
+
+.body th > :not(:last-child) {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+.body th > :last-child {
+  display: block;
+  margin-bottom: 0;
+}
+
+.body td > :not(:last-child) {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+.body td > :last-child {
+  display: block;
+  margin-bottom: 0;
+}
+
+.body blockquote > :not(:last-child) {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+.body blockquote > :last-child {
+  display: block;
+  margin-bottom: 0;
+}
+
+.body figcaption > :not(:last-child) {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+.body figcaption > :last-child {
+  display: block;
+  margin-bottom: 0;
+}
+
+.body figcaption > .legend > :not(:last-child) {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+.body figcaption > .legend > :last-child {
+  display: block;
+  margin-bottom: 0;
+}
+
+.body blockquote > div > :not(:last-child) {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+.body blockquote > div > :last-child {
+  display: block;
+  margin-bottom: 0;
+}
+
+.body .admonition > :not(:last-child) {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+.body .admonition > :last-child {
+  display: block;
+  margin-bottom: 0;
+}
+
+.body .footnote > :not(:last-child) {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+.body .footnote > :last-child {
+  display: block;
+  margin-bottom: 0;
+}
+
+.body table.docutils {
+  display: table;
   width: 100%;
   margin-bottom: 1rem;
   color: #212529;
   vertical-align: top;
   border-color: #88ddff;
 }
-table.docutils > :not(caption) > * > * {
+.body table.docutils > :not(caption) > * > * {
   padding: 0.5rem 0.5rem;
   background-color: var(--bs-table-bg);
   border-bottom-width: 1px;
   box-shadow: inset 0 0 0 9999px var(--bs-table-accent-bg);
 }
-table.docutils > tbody {
+.body table.docutils > tbody {
   vertical-align: inherit;
 }
-table.docutils > thead {
+.body table.docutils > thead {
   vertical-align: bottom;
 }
-table.docutils > :not(:first-child) {
+.body table.docutils > :not(:first-child) {
   border-top: 2px solid #39c7ff;
 }
 
@@ -12003,11 +12076,13 @@ h1, h2, h3, h4, h5, h6 {
   color: #33b3e6;
 }
 
-h1 {
+.body h1 {
   text-align: center;
+  margin-bottom: 2rem;
 }
 
 .rubric {
+  margin-top: 2rem;
   font-size: calc(1.325rem + 0.9vw);
 }
 @media (min-width: 1200px) {
@@ -12023,7 +12098,7 @@ h1 {
 .headerlink {
   padding-left: 0.5em;
   color: #88ddff;
-  font-size: 70%;
+  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   text-decoration: none;
 }
 .headerlink:hover {
@@ -12031,6 +12106,48 @@ h1 {
 }
 h1 > .headerlink {
   display: none;
+}
+
+.body li, .body dt, .body dd, .body th, .body td {
+  margin-bottom: 0.5rem;
+}
+.body li:last-child, .body dt:last-child, .body dd:last-child, .body th:last-child, .body td:last-child {
+  margin-bottom: 0;
+}
+.body ul, .body ol, .body dd {
+  padding-left: 2rem;
+}
+.body dt {
+  color: #a02ffd;
+}
+.body dd > ul:only-child, .body dd > ol:only-child {
+  padding-left: 0;
+}
+
+blockquote {
+  border-top: 1px solid #a02ffd;
+  border-bottom: 1px solid #a02ffd;
+  padding: 1em 2em;
+  color: #a02ffd;
+  font-style: italic;
+}
+blockquote .attribution {
+  text-align: right;
+  font-style: normal;
+}
+
+.footnote:not(:last-child) {
+  margin-bottom: 0.5rem;
+}
+
+.footnote > .label {
+  float: left;
+  padding-right: 0.5em;
+  font-weight: bold;
+}
+
+dl.field-list > dt.field-odd, dl.field-list > dt.field-even {
+  color: #601c98;
 }
 
 .admonition {
@@ -12117,6 +12234,19 @@ h1 > .headerlink {
   color: #523e02;
 }
 
+figure {
+  display: inline-block;
+}
+figure img {
+  margin-bottom: 0.5rem;
+  line-height: 1;
+}
+
+figcaption {
+  font-size: 0.875em;
+  color: #6c757d;
+}
+
 .toctree-wrapper > .caption {
   font-weight: bold;
   margin-bottom: 0.5rem;
@@ -12162,4 +12292,22 @@ body {
 #page-footer {
   margin-top: auto;
   background-color: #d7f4ff;
+}
+
+ul.plus > li::marker {
+  color: #12b14f;
+  content: "+ ";
+  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+ul.minus > li::marker {
+  color: #ff5b5b;
+  content: "- ";
+  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+ul.question > li::marker {
+  color: #a02ffd;
+  content: "? ";
+  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }

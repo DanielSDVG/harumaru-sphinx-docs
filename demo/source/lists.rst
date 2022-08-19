@@ -37,7 +37,7 @@ End of the definition list.
 
 Here are some special lists:
 
-.. rst-class:: pros
+.. rst-class:: plus
 
 *  Advantage 1
 
@@ -46,10 +46,19 @@ Here are some special lists:
 *  Advantage 3
 
 
-.. rst-class:: cons
+.. rst-class:: minus
 
 *  Disadvantage 1
 
 *  Disadvantage 2
 
 *  Disadvantage 3
+
+
+.. rst-class:: question
+
+*  Question 1
+
+*  Question 2
+
+*  Question 3

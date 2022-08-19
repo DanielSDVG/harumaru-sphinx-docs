@@ -3,79 +3,62 @@
 @import "../../bootstrap/scss/variables";
 @import "../../bootstrap/scss/mixins";
 
-$block-elements: p,
-  h1, h2, h3, h4, h5, h6,
-  ul, ol, dd,
-  table,
-  unquote(".math"),
-  admonition;
 $container-elements:
   li, dd, th, td,
-  unquote(".admonition");
+  blockquote,
+  figcaption,
+  unquote("figcaption > .legend"),
+  unquote("blockquote > div"),
+  unquote(".admonition"),
+  unquote(".footnote");
 
 $section-margin-top: 2em;
 $paragraph-margin: 1rem;
 $sub-paragraph-margin: 0.5rem;
 
-$list-indent: 2rem;
-
-$heading-color: shade-color(v.$primary, 10%);
-
-$headerlink-padding: 0.5em;
-
-
+$quote-color: v.$purple;
+$quote-color-700: shade-color(v.$purple, 40%);
 
 .body {
-
   section {
     margin-top: $section-margin-top;
   }
   > section {
     margin-top: 0;
   }
+}
 
-  // Block elements
-  #{$block-elements} {
+.body section {
+  > :not(:last-child) {
+    display: block;
     margin-bottom: $paragraph-margin;
-    &:last-child {
-      margin-bottom: 0;
-    }
   }
-  h1 {
-    margin-bottom: 2 * $paragraph-margin;
+  > :last-child {
+    display: block;
+    margin-bottom: 0;
   }
+}
 
-  #{$container-elements} {
-    #{$block-elements} {
+@each $container in $container-elements {
+  .body #{$container} {
+    > :not(:last-child) {
+      display: block;
       margin-bottom: $sub-paragraph-margin;
-      &:last-child {
-        margin-bottom: 0;
-      }
     }
-  }
-
-  // Lists
-  li, dt, dd, th, td {
-    margin-bottom: $sub-paragraph-margin;
-    &:last-child {
+    > :last-child {
+      display: block;
       margin-bottom: 0;
     }
   }
-  ul, ol, dd {
-    padding-left: $list-indent;
-  }
-  dd > ul:only-child, dd > ol:only-child {
-    padding-left: 0;
-  }
-
 }
 
 
 // Tables
 // =============================================================================
 
-table.docutils {
+.body table.docutils {
   // @extend .table
+  display: table;
   width: 100%;
   margin-bottom: $spacer;
   color: $table-color;
@@ -102,6 +85,9 @@ table.docutils {
 // Headers
 // =============================================================================
 
+$heading-color: shade-color(v.$primary, 10%);
+$headerlink-padding: 0.5em;
+
 %html-heading {
   color: $heading-color;
 }
@@ -118,12 +104,14 @@ h1, h2, h3, h4, h5, h6 {
   color: $heading-color;
 }
 
-h1 {
+.body h1 {
   text-align: center;
+  margin-bottom: 2 * $paragraph-margin;
 }
 
 .rubric {
   @extend %extra-heading;
+  margin-top: 2 * $paragraph-margin;
   @include font-size($h2-font-size);
 }
 
@@ -135,7 +123,7 @@ h1 {
 .headerlink {
   padding-left: $headerlink-padding;
   color: v.$primary-300;
-  font-size: 70%;
+  font-family: $font-family-monospace;
   text-decoration: none;
   &:hover {
     color: v.$primary-400;
@@ -145,6 +133,67 @@ h1 {
   }
 }
 
+// Lists
+// =============================================================================
+
+$list-indent: 2rem;
+
+.body {
+  li, dt, dd, th, td {
+    margin-bottom: $sub-paragraph-margin;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  ul, ol, dd {
+    padding-left: $list-indent;
+  }
+  dt {
+    color: $quote-color;
+  }
+  dd > ul:only-child, dd > ol:only-child {
+    padding-left: 0;
+  }
+}
+
+
+// Blockquotes
+// =============================================================================
+
+blockquote {
+  border-top: $border-width solid $quote-color;
+  border-bottom: $border-width solid $quote-color;
+  padding: 1em 2em;
+  color: $quote-color;
+  font-style: italic;
+  .attribution {
+    text-align: right;
+    font-style: normal;
+  }
+}
+
+
+// Footnotes
+// =============================================================================
+
+.footnote:not(:last-child) {
+  margin-bottom: $sub-paragraph-margin;
+}
+
+.footnote > .label {
+  float: left;
+  padding-right: 0.5em;
+  font-weight: bold;
+}
+
+
+// Field lists
+// =============================================================================
+dl.field-list {
+  > dt.field-odd, > dt.field-even {
+    color: $quote-color-700;
+  }
+}
 
 // Admonitions
 // =============================================================================
@@ -183,6 +232,25 @@ $admonition-types: (
   .#{$type} {
     @include alert-variant($alert-background, $alert-border, $alert-color);
   }
+}
+
+
+// Figures
+// =============================================================================
+
+figure {
+  // Ensures the caption's text aligns with the image.
+  display: inline-block;
+
+  img {
+    margin-bottom: $spacer * .5;
+    line-height: 1;
+  }
+}
+
+figcaption {
+  @include font-size($figure-caption-font-size);
+  color: $figure-caption-color;
 }
 
 
