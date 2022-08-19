@@ -11936,6 +11936,195 @@ mark, .mark {
   border-top-color: currentColor;
 }
 
+.body section {
+  margin-top: 2em;
+}
+.body > section {
+  margin-top: 0;
+}
+.body p, .body h1, .body h2, .body h3, .body h4, .body h5, .body h6, .body ul, .body ol, .body dd, .body table, .body .math, .body admonition {
+  margin-bottom: 1rem;
+}
+.body p:last-child, .body h1:last-child, .body h2:last-child, .body h3:last-child, .body h4:last-child, .body h5:last-child, .body h6:last-child, .body ul:last-child, .body ol:last-child, .body dd:last-child, .body table:last-child, .body .math:last-child, .body admonition:last-child {
+  margin-bottom: 0;
+}
+.body h1 {
+  margin-bottom: 2rem;
+}
+.body li p, .body li h1, .body li h2, .body li h3, .body li h4, .body li h5, .body li h6, .body li ul, .body li ol, .body li dd, .body li table, .body li .math, .body li admonition, .body dd p, .body dd h1, .body dd h2, .body dd h3, .body dd h4, .body dd h5, .body dd h6, .body dd ul, .body dd ol, .body dd dd, .body dd table, .body dd .math, .body dd admonition, .body th p, .body th h1, .body th h2, .body th h3, .body th h4, .body th h5, .body th h6, .body th ul, .body th ol, .body th dd, .body th table, .body th .math, .body th admonition, .body td p, .body td h1, .body td h2, .body td h3, .body td h4, .body td h5, .body td h6, .body td ul, .body td ol, .body td dd, .body td table, .body td .math, .body td admonition, .body .admonition p, .body .admonition h1, .body .admonition h2, .body .admonition h3, .body .admonition h4, .body .admonition h5, .body .admonition h6, .body .admonition ul, .body .admonition ol, .body .admonition dd, .body .admonition table, .body .admonition .math, .body .admonition admonition {
+  margin-bottom: 0.5rem;
+}
+.body li p:last-child, .body li h1:last-child, .body li h2:last-child, .body li h3:last-child, .body li h4:last-child, .body li h5:last-child, .body li h6:last-child, .body li ul:last-child, .body li ol:last-child, .body li dd:last-child, .body li table:last-child, .body li .math:last-child, .body li admonition:last-child, .body dd p:last-child, .body dd h1:last-child, .body dd h2:last-child, .body dd h3:last-child, .body dd h4:last-child, .body dd h5:last-child, .body dd h6:last-child, .body dd ul:last-child, .body dd ol:last-child, .body dd dd:last-child, .body dd table:last-child, .body dd .math:last-child, .body dd admonition:last-child, .body th p:last-child, .body th h1:last-child, .body th h2:last-child, .body th h3:last-child, .body th h4:last-child, .body th h5:last-child, .body th h6:last-child, .body th ul:last-child, .body th ol:last-child, .body th dd:last-child, .body th table:last-child, .body th .math:last-child, .body th admonition:last-child, .body td p:last-child, .body td h1:last-child, .body td h2:last-child, .body td h3:last-child, .body td h4:last-child, .body td h5:last-child, .body td h6:last-child, .body td ul:last-child, .body td ol:last-child, .body td dd:last-child, .body td table:last-child, .body td .math:last-child, .body td admonition:last-child, .body .admonition p:last-child, .body .admonition h1:last-child, .body .admonition h2:last-child, .body .admonition h3:last-child, .body .admonition h4:last-child, .body .admonition h5:last-child, .body .admonition h6:last-child, .body .admonition ul:last-child, .body .admonition ol:last-child, .body .admonition dd:last-child, .body .admonition table:last-child, .body .admonition .math:last-child, .body .admonition admonition:last-child {
+  margin-bottom: 0;
+}
+.body li, .body dt, .body dd, .body th, .body td {
+  margin-bottom: 0.5rem;
+}
+.body li:last-child, .body dt:last-child, .body dd:last-child, .body th:last-child, .body td:last-child {
+  margin-bottom: 0;
+}
+.body ul, .body ol, .body dd {
+  padding-left: 2rem;
+}
+.body dd > ul:only-child, .body dd > ol:only-child {
+  padding-left: 0;
+}
+
+table.docutils {
+  width: 100%;
+  margin-bottom: 1rem;
+  color: #212529;
+  vertical-align: top;
+  border-color: #88ddff;
+}
+table.docutils > :not(caption) > * > * {
+  padding: 0.5rem 0.5rem;
+  background-color: var(--bs-table-bg);
+  border-bottom-width: 1px;
+  box-shadow: inset 0 0 0 9999px var(--bs-table-accent-bg);
+}
+table.docutils > tbody {
+  vertical-align: inherit;
+}
+table.docutils > thead {
+  vertical-align: bottom;
+}
+table.docutils > :not(:first-child) {
+  border-top: 2px solid #39c7ff;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #33b3e6;
+}
+
+.admonition-title, .rubric {
+  font-weight: 500;
+  line-height: 1.2;
+  color: #33b3e6;
+}
+
+h1 {
+  text-align: center;
+}
+
+.rubric {
+  font-size: calc(1.325rem + 0.9vw);
+}
+@media (min-width: 1200px) {
+  .rubric {
+    font-size: 2rem;
+  }
+}
+
+.admonition-title {
+  font-size: 1.25rem;
+}
+
+.headerlink {
+  padding-left: 0.5em;
+  color: #88ddff;
+  font-size: 70%;
+  text-decoration: none;
+}
+.headerlink:hover {
+  color: #61d2ff;
+}
+h1 > .headerlink {
+  display: none;
+}
+
+.admonition {
+  position: relative;
+  padding: 1rem 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+}
+
+.admonition-title, .admonition h1, .admonition h2, .admonition h3, .admonition h4, .admonition h5, .admonition h6 {
+  color: inherit;
+}
+
+.danger {
+  color: #842029;
+  background-color: #f8d7da;
+  border-color: #f5c2c7;
+}
+.danger .alert-link {
+  color: #6a1a21;
+}
+
+.warning {
+  color: #664d03;
+  background-color: #fff3cd;
+  border-color: #ffecb5;
+}
+.warning .alert-link {
+  color: #523e02;
+}
+
+.attention {
+  color: #664d03;
+  background-color: #fff3cd;
+  border-color: #ffecb5;
+}
+.attention .alert-link {
+  color: #523e02;
+}
+
+.caution {
+  color: #664d03;
+  background-color: #fff3cd;
+  border-color: #ffecb5;
+}
+.caution .alert-link {
+  color: #523e02;
+}
+
+.note {
+  color: #055160;
+  background-color: #cff4fc;
+  border-color: #b6effb;
+}
+.note .alert-link {
+  color: #04414d;
+}
+
+.tip {
+  color: #0f5132;
+  background-color: #d1e7dd;
+  border-color: #badbcc;
+}
+.tip .alert-link {
+  color: #0c4128;
+}
+
+.hint {
+  color: #0f5132;
+  background-color: #d1e7dd;
+  border-color: #badbcc;
+}
+.hint .alert-link {
+  color: #0c4128;
+}
+
+.important {
+  color: #664d03;
+  background-color: #fff3cd;
+  border-color: #ffecb5;
+}
+.important .alert-link {
+  color: #523e02;
+}
+
+.toctree-wrapper > .caption {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+.toctree-wrapper > ul {
+  margin-bottom: 0;
+}
+
 body {
   display: flex;
   flex-direction: column;
@@ -11956,6 +12145,18 @@ body {
 
 #sidebar-offcanvas {
   visibility: visible;
+}
+
+.sidebar > .logo {
+  margin-bottom: 1.25rem;
+}
+
+.sidebar-block:not(:last-child) {
+  margin-bottom: 1.25rem;
+}
+.sidebar-block ul,
+.sidebar-block ol {
+  margin-bottom: 0;
 }
 
 #page-footer {

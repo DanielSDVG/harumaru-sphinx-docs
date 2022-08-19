@@ -18,6 +18,12 @@ body {
     + 2 * ($navbar-brand-padding-y + $navbar-padding-y);
 }
 
+
+// Sidebar
+// =============================================================================
+
+$sidebar-spacing: 1.25rem;
+
 #sidebar-container {
   width: 300px;
 }
@@ -25,6 +31,27 @@ body {
 #sidebar-offcanvas {
   visibility: visible;
 }
+
+.sidebar > .logo {
+  margin-bottom: $sidebar-spacing;
+}
+
+.sidebar-block {
+
+  &:not(:last-child) {
+    margin-bottom: $sidebar-spacing;
+  }
+
+  ul,
+  ol {
+    margin-bottom: 0;
+  }
+
+}
+
+
+// Footer
+// =============================================================================
 
 #page-footer {
   margin-top: auto;

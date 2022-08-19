@@ -33,16 +33,16 @@
 {%- endif %}
 
 {%- macro relbar() %}
-  <ul class="related" role="navigation" aria-label="related navigation">
+  <ul class="pagination related mx-auto" role="navigation" aria-label="related navigation">
 
     {%- for rellink in rellinks %}
-    <li>
-      <a class="button" href="{{ pathto(rellink[0])|e }}" title="{{ rellink[1]|striptags|e }}"
+    <li class="page-item">
+      <a class="page-link" href="{{ pathto(rellink[0])|e }}" title="{{ rellink[1]|striptags|e }}"
           {{ accesskey(rellink[2]) }}>{{ rellink[3] }}</a>
     </li>
     {%- endfor %}
 
-    {%- block relbaritems %} {% endblock %}
+    {%- block relbaritems %}{% endblock %}
 
   </ul>
 {%- endmacro %}
@@ -50,11 +50,11 @@
 {%- macro breadcrumb() %}
 <ul class="breadcrumb">
   {%- block rootrellink %}
-  <li class="bc-item bc-item-0"><a href="{{ pathto(master_doc)|e }}">{{ shorttitle|e }}</a>{{ bcdelim }}</li>
+  <li class="breadcrumb-item"><a href="{{ pathto(master_doc)|e }}">{{ shorttitle|e }}</a></li>
   {%- endblock %}
 
   {%- for parent in parents %}
-    <li class="bc-item bc-item-{{ loop.index }}"><a href="{{ parent.link|e }}" {% if loop.last %}{{ accesskey("U") }}{% endif %}>{{ parent.title }}</a>{{ bcdelim }}</li>
+    <li class="breadcrumb-item"><a href="{{ parent.link|e }}" {% if loop.last %}{{ accesskey("U") }}{% endif %}>{{ parent.title }}</a></li>
   {%- endfor %}
 </ul>
 {%- endmacro %}

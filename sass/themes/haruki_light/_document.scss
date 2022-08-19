@@ -1,0 +1,200 @@
+@use "bootstrap/variables.scss" as v;
+@import "../../bootstrap/scss/functions";
+@import "../../bootstrap/scss/variables";
+@import "../../bootstrap/scss/mixins";
+
+$block-elements: p,
+  h1, h2, h3, h4, h5, h6,
+  ul, ol, dd,
+  table,
+  unquote(".math"),
+  admonition;
+$container-elements:
+  li, dd, th, td,
+  unquote(".admonition");
+
+$section-margin-top: 2em;
+$paragraph-margin: 1rem;
+$sub-paragraph-margin: 0.5rem;
+
+$list-indent: 2rem;
+
+$heading-color: shade-color(v.$primary, 10%);
+
+$headerlink-padding: 0.5em;
+
+
+
+.body {
+
+  section {
+    margin-top: $section-margin-top;
+  }
+  > section {
+    margin-top: 0;
+  }
+
+  // Block elements
+  #{$block-elements} {
+    margin-bottom: $paragraph-margin;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  h1 {
+    margin-bottom: 2 * $paragraph-margin;
+  }
+
+  #{$container-elements} {
+    #{$block-elements} {
+      margin-bottom: $sub-paragraph-margin;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  // Lists
+  li, dt, dd, th, td {
+    margin-bottom: $sub-paragraph-margin;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  ul, ol, dd {
+    padding-left: $list-indent;
+  }
+  dd > ul:only-child, dd > ol:only-child {
+    padding-left: 0;
+  }
+
+}
+
+
+// Tables
+// =============================================================================
+
+table.docutils {
+  // @extend .table
+  width: 100%;
+  margin-bottom: $spacer;
+  color: $table-color;
+  vertical-align: $table-cell-vertical-align;
+  border-color: v.$table-border-color;
+  > :not(caption) > * > * {
+    padding: $table-cell-padding-y $table-cell-padding-x;
+    background-color: var(--#{$variable-prefix}table-bg);
+    border-bottom-width: $table-border-width;
+    box-shadow: inset 0 0 0 9999px var(--#{$variable-prefix}table-accent-bg);
+  }
+  > tbody {
+    vertical-align: inherit;
+  }
+  > thead {
+    vertical-align: bottom;
+  }
+  > :not(:first-child) {
+    border-top: (2 * $table-border-width) solid v.$table-group-separator-color;
+  }
+}
+
+
+// Headers
+// =============================================================================
+
+%html-heading {
+  color: $heading-color;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @extend %html-heading;
+}
+
+%extra-heading {
+  font-family: $headings-font-family;
+  font-style: $headings-font-style;
+  font-weight: $headings-font-weight;
+  line-height: $headings-line-height;
+  color: $heading-color;
+}
+
+h1 {
+  text-align: center;
+}
+
+.rubric {
+  @extend %extra-heading;
+  @include font-size($h2-font-size);
+}
+
+.admonition-title {
+  @extend %extra-heading;
+  @include font-size($h5-font-size);
+}
+
+.headerlink {
+  padding-left: $headerlink-padding;
+  color: v.$primary-300;
+  font-size: 70%;
+  text-decoration: none;
+  &:hover {
+    color: v.$primary-400;
+  }
+  h1 > & {
+    display: none;
+  }
+}
+
+
+// Admonitions
+// =============================================================================
+
+$admonition-types: (
+  "danger": "danger",
+  "warning": "warning",
+  "attention": "warning",
+  "caution": "warning",
+  "note": "info",
+  "tip": "success",
+  "hint": "success",
+  "important": "warning",
+);
+
+.admonition {
+  position: relative;
+  padding: $alert-padding-y $alert-padding-x;
+  margin-bottom: $alert-margin-bottom;
+  border: $alert-border-width solid transparent;
+  @include border-radius($alert-border-radius);
+}
+
+.admonition-title, .admonition %html-heading {
+  color: inherit;
+}
+
+@each $type, $state in $admonition-types {
+  $value: map-get($theme-colors, $state);
+  $alert-background: shift-color($value, v.$alert-bg-scale);
+  $alert-border: shift-color($value, v.$alert-border-scale);
+  $alert-color: shift-color($value, v.$alert-color-scale);
+  @if (contrast-ratio($alert-background, $alert-color) < $min-contrast-ratio) {
+    $alert-color: mix($value, color-contrast($alert-background), abs($alert-color-scale));
+  }
+  .#{$type} {
+    @include alert-variant($alert-background, $alert-border, $alert-color);
+  }
+}
+
+
+// TOC trees
+// =============================================================================
+
+.toctree-wrapper {
+  > .caption {
+    font-weight: bold;
+    margin-bottom: $sub-paragraph-margin;
+  }
+  > ul {
+    margin-bottom: 0;
+  }
+}

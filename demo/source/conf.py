@@ -29,3 +29,4 @@ exclude_patterns = []
 
 html_theme = 'haruki_light'
 html_static_path = ['_static']
+html_logo = '_static/logo.png'
