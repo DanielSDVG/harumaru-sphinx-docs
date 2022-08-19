@@ -217,6 +217,7 @@ $admonition-types: (
 }
 
 .admonition-title, .admonition %html-heading {
+  font-family: v.$headings-font-family;
   color: inherit;
 }
 

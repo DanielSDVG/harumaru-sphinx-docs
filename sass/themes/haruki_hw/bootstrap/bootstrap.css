@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 /*!
  * Bootstrap v5.1.3 (https://getbootstrap.com/)
  * Copyright 2011-2021 The Bootstrap Authors
@@ -99,7 +100,6 @@ hr:not([size]) {
 h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
   margin-top: 0;
   margin-bottom: 0.5rem;
-  font-family: "Nunito", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-weight: 500;
   line-height: 1.2;
 }
@@ -661,15 +661,15 @@ progress {
   display: flex;
   flex-wrap: wrap;
   margin-top: calc(-1 * var(--bs-gutter-y));
-  margin-right: calc(-.5 * var(--bs-gutter-x));
-  margin-left: calc(-.5 * var(--bs-gutter-x));
+  margin-right: calc(-0.5 * var(--bs-gutter-x));
+  margin-left: calc(-0.5 * var(--bs-gutter-x));
 }
 .row > * {
   flex-shrink: 0;
   width: 100%;
   max-width: 100%;
-  padding-right: calc(var(--bs-gutter-x) * .5);
-  padding-left: calc(var(--bs-gutter-x) * .5);
+  padding-right: calc(var(--bs-gutter-x) * 0.5);
+  padding-left: calc(var(--bs-gutter-x) * 0.5);
   margin-top: var(--bs-gutter-y);
 }
 
@@ -6360,15 +6360,15 @@ textarea.form-control-lg {
 }
 
 .ratio-4x3 {
-  --bs-aspect-ratio: calc(3 / 4 * 100%);
+  --bs-aspect-ratio: 75%;
 }
 
 .ratio-16x9 {
-  --bs-aspect-ratio: calc(9 / 16 * 100%);
+  --bs-aspect-ratio: 56.25%;
 }
 
 .ratio-21x9 {
-  --bs-aspect-ratio: calc(9 / 21 * 100%);
+  --bs-aspect-ratio: 42.8571428571%;
 }
 
 .fixed-top {
@@ -11934,404 +11934,4 @@ mark, .mark {
 
 .table.table-dark > :not(:first-child) {
   border-top-color: currentColor;
-}
-
-@font-face {
-  font-family: "nunito";
-  font-weight: normal;
-  font-style: normal;
-  src: url("fonts/nunito/Nunito-Regular.ttf") format("truetype");
-}
-@font-face {
-  font-family: "nunito";
-  font-weight: normal;
-  font-style: italic;
-  src: url("fonts/nunito/Nunito-Italic.ttf") format("truetype");
-}
-@font-face {
-  font-family: "nunito";
-  font-weight: bold;
-  font-style: normal;
-  src: url("fonts/nunito/Nunito-Bold.ttf") format("truetype");
-}
-@font-face {
-  font-family: "nunito";
-  font-weight: bold;
-  font-style: italic;
-  src: url("fonts/nunito/Nunito-BoldItalic.ttf") format("truetype");
-}
-.body section {
-  margin-top: 2em;
-}
-.body > section {
-  margin-top: 0;
-}
-
-.body section > :not(:last-child) {
-  display: block;
-  margin-bottom: 1rem;
-}
-.body section > :last-child {
-  display: block;
-  margin-bottom: 0;
-}
-
-.body li > :not(:last-child) {
-  display: block;
-  margin-bottom: 0.5rem;
-}
-.body li > :last-child {
-  display: block;
-  margin-bottom: 0;
-}
-
-.body dd > :not(:last-child) {
-  display: block;
-  margin-bottom: 0.5rem;
-}
-.body dd > :last-child {
-  display: block;
-  margin-bottom: 0;
-}
-
-.body th > :not(:last-child) {
-  display: block;
-  margin-bottom: 0.5rem;
-}
-.body th > :last-child {
-  display: block;
-  margin-bottom: 0;
-}
-
-.body td > :not(:last-child) {
-  display: block;
-  margin-bottom: 0.5rem;
-}
-.body td > :last-child {
-  display: block;
-  margin-bottom: 0;
-}
-
-.body blockquote > :not(:last-child) {
-  display: block;
-  margin-bottom: 0.5rem;
-}
-.body blockquote > :last-child {
-  display: block;
-  margin-bottom: 0;
-}
-
-.body figcaption > :not(:last-child) {
-  display: block;
-  margin-bottom: 0.5rem;
-}
-.body figcaption > :last-child {
-  display: block;
-  margin-bottom: 0;
-}
-
-.body figcaption > .legend > :not(:last-child) {
-  display: block;
-  margin-bottom: 0.5rem;
-}
-.body figcaption > .legend > :last-child {
-  display: block;
-  margin-bottom: 0;
-}
-
-.body blockquote > div > :not(:last-child) {
-  display: block;
-  margin-bottom: 0.5rem;
-}
-.body blockquote > div > :last-child {
-  display: block;
-  margin-bottom: 0;
-}
-
-.body .admonition > :not(:last-child) {
-  display: block;
-  margin-bottom: 0.5rem;
-}
-.body .admonition > :last-child {
-  display: block;
-  margin-bottom: 0;
-}
-
-.body .footnote > :not(:last-child) {
-  display: block;
-  margin-bottom: 0.5rem;
-}
-.body .footnote > :last-child {
-  display: block;
-  margin-bottom: 0;
-}
-
-.body table.docutils {
-  display: table;
-  width: 100%;
-  margin-bottom: 1rem;
-  vertical-align: top;
-  border-color: #88ddff;
-}
-.body table.docutils > :not(caption) > * > * {
-  padding: 0.5rem 0.5rem;
-  background-color: var(--bs-table-bg);
-  border-bottom-width: 1px;
-  box-shadow: inset 0 0 0 9999px var(--bs-table-accent-bg);
-}
-.body table.docutils > tbody {
-  vertical-align: inherit;
-}
-.body table.docutils > thead {
-  vertical-align: bottom;
-}
-.body table.docutils > :not(:first-child) {
-  border-top: 2px solid #39c7ff;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  color: #33b3e6;
-}
-
-.admonition-title, .rubric {
-  font-weight: 500;
-  line-height: 1.2;
-  color: #33b3e6;
-}
-
-.body h1 {
-  text-align: center;
-  margin-bottom: 2rem;
-}
-
-.rubric {
-  margin-top: 2rem;
-  font-size: calc(1.325rem + 0.9vw);
-}
-@media (min-width: 1200px) {
-  .rubric {
-    font-size: 2rem;
-  }
-}
-
-.admonition-title {
-  font-size: 1.25rem;
-}
-
-.headerlink {
-  padding-left: 0.5em;
-  color: #88ddff;
-  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-  text-decoration: none;
-}
-.headerlink:hover {
-  color: #61d2ff;
-}
-h1 > .headerlink {
-  display: none;
-}
-
-.body li, .body dt, .body dd, .body th, .body td {
-  margin-bottom: 0.5rem;
-}
-.body li:last-child, .body dt:last-child, .body dd:last-child, .body th:last-child, .body td:last-child {
-  margin-bottom: 0;
-}
-.body ul, .body ol, .body dd {
-  padding-left: 2rem;
-}
-.body dt {
-  color: #a02ffd;
-}
-.body dd > ul:only-child, .body dd > ol:only-child {
-  padding-left: 0;
-}
-
-blockquote {
-  border-top: 1px solid #a02ffd;
-  border-bottom: 1px solid #a02ffd;
-  padding: 1em 2em;
-  color: #a02ffd;
-  font-style: italic;
-}
-blockquote .attribution {
-  text-align: right;
-  font-style: normal;
-}
-
-.footnote:not(:last-child) {
-  margin-bottom: 0.5rem;
-}
-
-.footnote > .label {
-  float: left;
-  padding-right: 0.5em;
-  font-weight: bold;
-}
-
-dl.field-list > dt.field-odd, dl.field-list > dt.field-even {
-  color: #601c98;
-}
-
-.admonition {
-  position: relative;
-  padding: 1rem 1rem;
-  margin-bottom: 1rem;
-  border: 1px solid transparent;
-  border-radius: 0.25rem;
-}
-
-.admonition-title, .admonition h1, .admonition h2, .admonition h3, .admonition h4, .admonition h5, .admonition h6 {
-  font-family: "Nunito", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  color: inherit;
-}
-
-.danger {
-  color: #842029;
-  background-color: #f8d7da;
-  border-color: #f5c2c7;
-}
-.danger .alert-link {
-  color: #6a1a21;
-}
-
-.warning {
-  color: #664d03;
-  background-color: #fff3cd;
-  border-color: #ffecb5;
-}
-.warning .alert-link {
-  color: #523e02;
-}
-
-.attention {
-  color: #664d03;
-  background-color: #fff3cd;
-  border-color: #ffecb5;
-}
-.attention .alert-link {
-  color: #523e02;
-}
-
-.caution {
-  color: #664d03;
-  background-color: #fff3cd;
-  border-color: #ffecb5;
-}
-.caution .alert-link {
-  color: #523e02;
-}
-
-.note {
-  color: #055160;
-  background-color: #cff4fc;
-  border-color: #b6effb;
-}
-.note .alert-link {
-  color: #04414d;
-}
-
-.tip {
-  color: #0f5132;
-  background-color: #d1e7dd;
-  border-color: #badbcc;
-}
-.tip .alert-link {
-  color: #0c4128;
-}
-
-.hint {
-  color: #0f5132;
-  background-color: #d1e7dd;
-  border-color: #badbcc;
-}
-.hint .alert-link {
-  color: #0c4128;
-}
-
-.important {
-  color: #664d03;
-  background-color: #fff3cd;
-  border-color: #ffecb5;
-}
-.important .alert-link {
-  color: #523e02;
-}
-
-figure {
-  display: inline-block;
-}
-figure img {
-  margin-bottom: 0.5rem;
-  line-height: 1;
-}
-
-figcaption {
-  font-size: 0.875em;
-  color: #6c757d;
-}
-
-.toctree-wrapper > .caption {
-  font-weight: bold;
-  margin-bottom: 0.5rem;
-}
-.toctree-wrapper > ul {
-  margin-bottom: 0;
-}
-
-body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-
-#navbar {
-  background-color: #fff;
-}
-
-#main-container {
-  margin-top: 3.5rem;
-}
-
-#sidebar-container {
-  width: 300px;
-}
-
-#sidebar-offcanvas {
-  visibility: visible;
-}
-
-.sidebar > .logo {
-  margin-bottom: 1.25rem;
-}
-
-.sidebar-block:not(:last-child) {
-  margin-bottom: 1.25rem;
-}
-.sidebar-block ul,
-.sidebar-block ol {
-  margin-bottom: 0;
-}
-
-#page-footer {
-  margin-top: auto;
-  background-color: #d7f4ff;
-}
-
-ul.plus > li::marker {
-  color: #12b14f;
-  content: "+ ";
-  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-}
-
-ul.minus > li::marker {
-  color: #ff5b5b;
-  content: "- ";
-  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-}
-
-ul.question > li::marker {
-  color: #a02ffd;
-  content: "? ";
-  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }

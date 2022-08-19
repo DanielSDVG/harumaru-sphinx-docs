@@ -16,8 +16,8 @@ $section-margin-top: 2em;
 $paragraph-margin: 1rem;
 $sub-paragraph-margin: 0.5rem;
 
-$quote-color: tint-color(v.$purple, 30%);
-$quote-color-700: shade-color($quote-color, 40%);
+$quote-color: v.$purple;
+$quote-color-700: shade-color(v.$purple, 40%);
 
 .body {
   section {
@@ -84,7 +84,7 @@ $quote-color-700: shade-color($quote-color, 40%);
 // Headers
 // =============================================================================
 
-$heading-color: tint-color(v.$primary, 10%);
+$heading-color: shade-color(v.$primary, 10%);
 $headerlink-padding: 0.5em;
 
 %html-heading {
@@ -121,11 +121,11 @@ h1, h2, h3, h4, h5, h6 {
 
 .headerlink {
   padding-left: $headerlink-padding;
-  color: v.$primary-800;
+  color: v.$primary-300;
   font-family: $font-family-monospace;
   text-decoration: none;
   &:hover {
-    color: v.$primary-700;
+    color: v.$primary-400;
   }
   h1 > & {
     display: none;
@@ -265,4 +265,12 @@ figcaption {
   > ul {
     margin-bottom: 0;
   }
+}
+
+
+// Math
+// =============================================================================
+
+mjx-container {
+  font-size: 115% !important;
 }

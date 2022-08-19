@@ -27,6 +27,6 @@ exclude_patterns = []
 # -- Options for HTML output ----------B---------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
-html_theme = 'haruki_light'
+html_theme = 'haruki_hw'
 html_static_path = ['_static']
 html_logo = '_static/logo.png'

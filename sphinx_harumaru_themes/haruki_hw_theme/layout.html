@@ -33,7 +33,7 @@
 {%- endif %}
 
 {%- macro relbar() %}
-  <ul class="pagination related mx-auto" role="navigation" aria-label="related navigation">
+  <ul class="pagination pagination-sm" role="navigation" aria-label="related navigation">
 
     {%- for rellink in rellinks %}
     <li class="page-item">
@@ -49,13 +49,22 @@
 
 {%- macro breadcrumb() %}
 <ul class="breadcrumb">
+
   {%- block rootrellink %}
-  <li class="breadcrumb-item"><a href="{{ pathto(master_doc)|e }}">{{ shorttitle|e }}</a></li>
+  <li class="breadcrumb-item">
+    <a href="{{ pathto(master_doc)|e }}">{{ shorttitle|e }}</a>
+  </li>
   {%- endblock %}
 
   {%- for parent in parents %}
-    <li class="breadcrumb-item"><a href="{{ parent.link|e }}" {% if loop.last %}{{ accesskey("U") }}{% endif %}>{{ parent.title }}</a></li>
+  <li class="breadcrumb-item">
+    <a href="{{ parent.link|e }}" {% if loop.last %}{{ accesskey("U") }}{% endif %}>{{ parent.title }}</a>
+  </li>
   {%- endfor %}
+
+  <li class="breadcrumb-item active">{{ title }}</li>
+
+
 </ul>
 {%- endmacro %}
 
@@ -200,47 +209,64 @@
 <body>
 
 {%- block navbar %}
-<nav class="navbar">
+<nav id="navbar" class="navbar fixed-top navbar-expand-lg navbar-light border-bottom border-2">
   <div class="container">
-    <button class="sidebar-toggler">
-      <i class="fas fa-bars"></i>
+    
+    <a class="navbar-brand" href="#">{{ project }}</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-content" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
     </button>
 
-    <span class="navbar-title">{{ project }}</span>
+    <div class="collapse navbar-collapse" id="navbar-content">
+      
+      <div class="d-flex ms-auto">
+        <div class="nav-item pe-2">
+          <button type="button" class="btn btn-outline-primary d-block d-lg-none" data-bs-toggle="offcanvas"
+          data-bs-target="#sidebar-offcanvas" aria-controls="sidebar-offcanvas">
+            <i class="fas fa-plus"></i>
+          </button>
+        </div>
+        <div class="w-100">
+        {%- block searchbox %}
+          <form class="d-flex" action="{{ pathto('search') }}" method="get" role="search">
+            <input class="form-control me-2" type="search" name="q" aria-label="Search">
+            <button class="btn btn-primary" type="submit">{{ _('search') }}</button>
+          </form>
+          {%- endblock %}
+        </div>
+      </div>
+      
 
-    {%- block searchbox %}
-    <form class="search" action="{{ pathto('search') }}" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
-      <input type="submit" value="{{ _('search') }}" />
-    </form>
-    {%- endblock %}
+    </div>
+
   </div>
 </nav>
 {%- endblock %}
 
 {%- block content %}
-<div class="container">
-  <div class="main-content">
+<div id="main-container" class="container">
+  <div class="row py-3">
 
     {%- if render_sidebar %}
     {%- block sidebar %}
-    {{ sidebar() }}
+    <div id="sidebar-container" class="d-none d-lg-block">
+      {{ sidebar() }}
+    </div>
     {% endblock %}
     {%- endif %}
     
     {%- block document %}
-    <div class="document">
-
+    <div class="col">
       {{ relbar() }}
-
       {{ breadcrumb() }}
-
+      
+      <hr />
       <div class="body" role="main">
       {% block body %}{% endblock %}
       </div>
+      <hr />
 
       {{ relbar() }}
-
     </div>
     {%- endblock %}
 
@@ -248,9 +274,21 @@
 </div>
 {%- endblock %}
 
+{%- block offcanvas %}
+<div class="offcanvas offcanvas-start" tabindex="-1" id="sidebar-offcanvas">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title">{{ project }}</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    {{ sidebar() }}
+  </div>
+</div>
+{%- endblock %}
+
 {%- block footer %}
-<footer class="page-footer" role="contentinfo">
-  <div class="container">
+<footer id="page-footer" role="contentinfo">
+  <div class="container pt-3 pb-5 text-center">
 
   {%- if show_copyright %}
     {%- if hasdoc('copyright') %}
@@ -272,7 +310,7 @@
 </div>
 {%- endblock %}
 
-<script src="{{ pathto('_static/navbar.js', 1)|e }}"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
 
 </body>
 </html>
