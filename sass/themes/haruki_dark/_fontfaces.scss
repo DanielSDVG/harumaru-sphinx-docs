@@ -1,0 +1,32 @@
+@use "../../utilities/fontfaces.scss";
+
+
+$font-face-properties: (
+  (
+    "family": "nunito",
+    "weight": normal,
+    "style": normal,
+    "ttf": "nunito/Nunito-Regular.ttf"
+  ), (
+    "family": "nunito",
+    "weight": normal,
+    "style": italic,
+    "ttf": "nunito/Nunito-Italic.ttf"
+  ), (
+    "family": "nunito",
+    "weight": bold,
+    "style": normal,
+    "ttf": "nunito/Nunito-Bold.ttf"
+  ), (
+    "family": "nunito",
+    "weight": bold,
+    "style": italic,
+    "ttf": "nunito/Nunito-BoldItalic.ttf"
+  )
+);
+
+$font-face-base-url: "fonts";
+
+@each $props in $font-face-properties {
+  @include fontfaces.font-face($props, $font-face-base-url);
+}
