@@ -18,6 +18,11 @@ body {
     + 2 * ($navbar-brand-padding-y + $navbar-padding-y);
 }
 
+.docs-container {
+  @include make-container();
+  max-width: 1120px;
+}
+
 
 // Sidebar
 // =============================================================================

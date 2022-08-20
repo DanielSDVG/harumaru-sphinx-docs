@@ -210,7 +210,7 @@
 
 {%- block navbar %}
 <nav id="navbar" class="navbar fixed-top navbar-expand-lg navbar-dark border-bottom border-2">
-  <div class="container">
+  <div class="container docs-container">
     
     <a class="navbar-brand" href="#">{{ project }}</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-content" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -244,7 +244,7 @@
 {%- endblock %}
 
 {%- block content %}
-<div id="main-container" class="container">
+<div id="main-container" class="docs-container">
   <div class="row py-3">
 
     {%- if render_sidebar %}
@@ -288,7 +288,7 @@
 
 {%- block footer %}
 <footer id="page-footer" role="contentinfo">
-  <div class="container pt-3 pb-5 text-center">
+  <div class="docs-container pt-3 pb-5 text-center">
 
   {%- if show_copyright %}
     {%- if hasdoc('copyright') %}

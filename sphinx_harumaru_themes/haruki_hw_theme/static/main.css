@@ -12099,7 +12099,7 @@ h1, h2, h3, h4, h5, h6 {
   color: #33b3e6;
 }
 
-.body h1 {
+.body h1:first-child {
   text-align: center;
   margin-bottom: 2rem;
 }
@@ -12295,6 +12295,15 @@ body {
 
 #main-container {
   margin-top: 3.5rem;
+}
+
+.docs-container {
+  width: 100%;
+  padding-right: var(--bs-gutter-x, 0.75rem);
+  padding-left: var(--bs-gutter-x, 0.75rem);
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 1120px;
 }
 
 #sidebar-container {
