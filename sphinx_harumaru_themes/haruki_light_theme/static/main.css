@@ -102,6 +102,7 @@ h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
   font-family: "Nunito", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-weight: 500;
   line-height: 1.2;
+  color: #33b3e6;
 }
 
 h1, .h1 {
@@ -5859,6 +5860,7 @@ textarea.form-control-lg {
   padding: 0.5rem 1rem;
   margin-bottom: 0;
   font-size: 1rem;
+  color: #33b3e6;
   background-color: rgba(57, 199, 255, 0.1);
   border-bottom: 1px solid #88ddff;
   border-top-left-radius: calc(0.3rem - 1px);
@@ -11968,101 +11970,79 @@ mark, .mark {
 }
 
 .body section > :not(:last-child) {
-  display: block;
   margin-bottom: 1rem;
 }
 .body section > :last-child {
-  display: block;
   margin-bottom: 0;
 }
 
 .body li > :not(:last-child) {
-  display: block;
   margin-bottom: 0.5rem;
 }
 .body li > :last-child {
-  display: block;
   margin-bottom: 0;
 }
 
 .body dd > :not(:last-child) {
-  display: block;
   margin-bottom: 0.5rem;
 }
 .body dd > :last-child {
-  display: block;
   margin-bottom: 0;
 }
 
 .body th > :not(:last-child) {
-  display: block;
   margin-bottom: 0.5rem;
 }
 .body th > :last-child {
-  display: block;
   margin-bottom: 0;
 }
 
 .body td > :not(:last-child) {
-  display: block;
   margin-bottom: 0.5rem;
 }
 .body td > :last-child {
-  display: block;
   margin-bottom: 0;
 }
 
 .body blockquote > :not(:last-child) {
-  display: block;
   margin-bottom: 0.5rem;
 }
 .body blockquote > :last-child {
-  display: block;
   margin-bottom: 0;
 }
 
 .body figcaption > :not(:last-child) {
-  display: block;
   margin-bottom: 0.5rem;
 }
 .body figcaption > :last-child {
-  display: block;
   margin-bottom: 0;
 }
 
 .body figcaption > .legend > :not(:last-child) {
-  display: block;
   margin-bottom: 0.5rem;
 }
 .body figcaption > .legend > :last-child {
-  display: block;
   margin-bottom: 0;
 }
 
 .body blockquote > div > :not(:last-child) {
-  display: block;
   margin-bottom: 0.5rem;
 }
 .body blockquote > div > :last-child {
-  display: block;
   margin-bottom: 0;
 }
 
 .body .admonition > :not(:last-child) {
-  display: block;
   margin-bottom: 0.5rem;
 }
 .body .admonition > :last-child {
-  display: block;
   margin-bottom: 0;
 }
 
 .body .footnote > :not(:last-child) {
-  display: block;
   margin-bottom: 0.5rem;
 }
 .body .footnote > :last-child {
-  display: block;
   margin-bottom: 0;
 }
 
@@ -12089,17 +12069,14 @@ mark, .mark {
   border-top: 2px solid #39c7ff;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  color: #33b3e6;
-}
-
 .admonition-title, .rubric {
+  font-family: "Nunito", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-weight: 500;
   line-height: 1.2;
   color: #33b3e6;
 }
 
-.body h1:first-child {
+.body h1:first-child, .body .h1:first-child {
   text-align: center;
   margin-bottom: 2rem;
 }
@@ -12127,7 +12104,7 @@ h1, h2, h3, h4, h5, h6 {
 .headerlink:hover {
   color: #61d2ff;
 }
-h1 > .headerlink {
+h1 > .headerlink, .h1 > .headerlink {
   display: none;
 }
 
@@ -12181,94 +12158,116 @@ dl.field-list > dt.field-odd, dl.field-list > dt.field-even {
   border-radius: 0.25rem;
 }
 
-.admonition-title, .admonition h1, .admonition h2, .admonition h3, .admonition h4, .admonition h5, .admonition h6 {
+.admonition-title, .admonition h1, .admonition .h1, .admonition h2, .admonition .h2, .admonition h3, .admonition .h3, .admonition h4, .admonition .h4, .admonition h5, .admonition .h5, .admonition h6, .admonition .h6 {
   font-family: "Nunito", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   color: inherit;
 }
 
 .danger {
-  color: #842029;
-  background-color: #f8d7da;
-  border-color: #f5c2c7;
+  color: #993737;
+  background-color: #ffdede;
+  border-color: #ffcece;
 }
 .danger .alert-link {
-  color: #6a1a21;
+  color: #7a2c2c;
 }
 
 .warning {
-  color: #664d03;
-  background-color: #fff3cd;
-  border-color: #ffecb5;
+  color: #664d00;
+  background-color: #fff2cc;
+  border-color: #ffecb3;
 }
 .warning .alert-link {
-  color: #523e02;
+  color: #523e00;
 }
 
 .attention {
-  color: #664d03;
-  background-color: #fff3cd;
-  border-color: #ffecb5;
+  color: #664d00;
+  background-color: #fff2cc;
+  border-color: #ffecb3;
 }
 .attention .alert-link {
-  color: #523e02;
+  color: #523e00;
 }
 
 .caution {
-  color: #664d03;
-  background-color: #fff3cd;
-  border-color: #ffecb5;
+  color: #664d00;
+  background-color: #fff2cc;
+  border-color: #ffecb3;
 }
 .caution .alert-link {
-  color: #523e02;
+  color: #523e00;
 }
 
 .note {
-  color: #055160;
-  background-color: #cff4fc;
-  border-color: #b6effb;
+  color: #601c98;
+  background-color: #ecd5ff;
+  border-color: #e3c1fe;
 }
 .note .alert-link {
-  color: #04414d;
+  color: #4d167a;
 }
 
 .tip {
-  color: #0f5132;
-  background-color: #d1e7dd;
-  border-color: #badbcc;
+  color: #0b6a2f;
+  background-color: #d0efdc;
+  border-color: #b8e8ca;
 }
 .tip .alert-link {
-  color: #0c4128;
+  color: #095526;
 }
 
 .hint {
-  color: #0f5132;
-  background-color: #d1e7dd;
-  border-color: #badbcc;
+  color: #0b6a2f;
+  background-color: #d0efdc;
+  border-color: #b8e8ca;
 }
 .hint .alert-link {
-  color: #0c4128;
+  color: #095526;
 }
 
 .important {
-  color: #664d03;
-  background-color: #fff3cd;
-  border-color: #ffecb5;
+  color: #664d00;
+  background-color: #fff2cc;
+  border-color: #ffecb3;
 }
 .important .alert-link {
-  color: #523e02;
+  color: #523e00;
+}
+
+.body section img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.body section img.align-left {
+  margin-left: 0;
+}
+.body section img.align-right {
+  margin-right: 0;
 }
 
 figure {
   display: inline-block;
+  width: 100%;
 }
-figure img {
+figure > img, figure > a > img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 0.5rem;
   line-height: 1;
+}
+figure.align-left > img {
+  margin-left: 0;
+}
+figure.align-right > img {
+  margin-right: 0;
 }
 
 figcaption {
   font-size: 0.875em;
-  color: #6c757d;
+  color: #888888;
 }
 
 .toctree-wrapper > .caption {

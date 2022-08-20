@@ -1,7 +1,7 @@
-@use "bootstrap/variables.scss" as v;
-@import "../../bootstrap/scss/functions";
-@import "../../bootstrap/scss/variables";
-@import "../../bootstrap/scss/mixins";
+@import "../bootstrap/scss/functions";
+@import "../bootstrap/scss/variables";
+@import "../bootstrap/scss/mixins";
+
 
 body {
   display: flex;
@@ -10,7 +10,7 @@ body {
 }
 
 #navbar {
-  background-color: v.$body-bg;
+  background-color: $body-bg;
 }
 
 #main-container {
@@ -60,5 +60,5 @@ $sidebar-spacing: 1.25rem;
 
 #page-footer {
   margin-top: auto;
-  background-color: v.$primary-100;
+  background-color: $footer-bg;
 }

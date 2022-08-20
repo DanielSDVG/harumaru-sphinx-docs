@@ -4,6 +4,15 @@ Images and Media
 Here's an image:
 
 .. image:: /_static/logo.png
+   :align: left
+
+.. image:: /_static/logo.png
+   :align: center
+
+.. image:: /_static/logo.png
+   :align: right
+
+.. image:: /_static/logo.png
 
 And this is a figure:
 
@@ -15,3 +24,18 @@ And this is a figure:
 
    The legend consists of all elements after the caption.  In this
    case, the legend consists of this paragraph.
+
+.. figure:: /_static/logo.png
+   :align: left
+
+   This is the caption of the figure (a simple paragraph).
+
+.. figure:: /_static/logo.png
+   :align: center
+
+   This is the caption of the figure (a simple paragraph).
+
+.. figure:: /_static/logo.png
+   :align: right
+
+   This is the caption of the figure (a simple paragraph).

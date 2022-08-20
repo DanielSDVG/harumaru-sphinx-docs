@@ -446,3 +446,19 @@ $toast-border-color:                        $border-color;
 $toast-header-color:                        $body-color;
 $toast-header-background-color:             $primary-100;
 $toast-header-border-color:                 $border-color;
+
+
+
+// =============================================================================
+// Sphinx documentation variables
+// =============================================================================
+
+$quote-color: $purple;
+$quote-color-700: shade-color($purple, 40%);
+
+$headings-color: shade-color($primary, 10%);
+
+$headerlink-color: $primary-300;
+$headerlink-hover-color: $primary-400;
+
+$footer-bg: $primary-100;

@@ -1,7 +1,7 @@
-@use "bootstrap/variables.scss" as v;
-@import "../../bootstrap/scss/functions";
-@import "../../bootstrap/scss/variables";
-@import "../../bootstrap/scss/mixins";
+@import "../bootstrap/scss/functions";
+@import "../bootstrap/scss/variables";
+@import "../bootstrap/scss/mixins";
+
 
 $container-elements:
   li, dd, th, td,
@@ -16,9 +16,6 @@ $section-margin-top: 2em;
 $paragraph-margin: 1rem;
 $sub-paragraph-margin: 0.5rem;
 
-$quote-color: v.$purple;
-$quote-color-700: shade-color(v.$purple, 40%);
-
 .body {
   section {
     margin-top: $section-margin-top;
@@ -30,11 +27,9 @@ $quote-color-700: shade-color(v.$purple, 40%);
 
 .body section {
   > :not(:last-child) {
-    display: block;
     margin-bottom: $paragraph-margin;
   }
   > :last-child {
-    display: block;
     margin-bottom: 0;
   }
 }
@@ -42,11 +37,9 @@ $quote-color-700: shade-color(v.$purple, 40%);
 @each $container in $container-elements {
   .body #{$container} {
     > :not(:last-child) {
-      display: block;
       margin-bottom: $sub-paragraph-margin;
     }
     > :last-child {
-      display: block;
       margin-bottom: 0;
     }
   }
@@ -62,7 +55,7 @@ $quote-color-700: shade-color(v.$purple, 40%);
   width: 100%;
   margin-bottom: $spacer;
   vertical-align: $table-cell-vertical-align;
-  border-color: v.$table-border-color;
+  border-color: $table-border-color;
   > :not(caption) > * > * {
     padding: $table-cell-padding-y $table-cell-padding-x;
     background-color: var(--#{$variable-prefix}table-bg);
@@ -76,7 +69,7 @@ $quote-color-700: shade-color(v.$purple, 40%);
     vertical-align: bottom;
   }
   > :not(:first-child) {
-    border-top: (2 * $table-border-width) solid v.$table-group-separator-color;
+    border-top: (2 * $table-border-width) solid $table-group-separator-color;
   }
 }
 
@@ -84,12 +77,7 @@ $quote-color-700: shade-color(v.$purple, 40%);
 // Headers
 // =============================================================================
 
-$heading-color: shade-color(v.$primary, 10%);
 $headerlink-padding: 0.5em;
-
-%html-heading {
-  color: $heading-color;
-}
 
 h1, h2, h3, h4, h5, h6 {
   @extend %html-heading;
@@ -100,7 +88,7 @@ h1, h2, h3, h4, h5, h6 {
   font-style: $headings-font-style;
   font-weight: $headings-font-weight;
   line-height: $headings-line-height;
-  color: $heading-color;
+  color: $headings-color;
 }
 
 .body h1:first-child {
@@ -121,11 +109,11 @@ h1, h2, h3, h4, h5, h6 {
 
 .headerlink {
   padding-left: $headerlink-padding;
-  color: v.$primary-300;
+  color: $headerlink-color;
   font-family: $font-family-monospace;
   text-decoration: none;
   &:hover {
-    color: v.$primary-400;
+    color: $headerlink-hover-color;
   }
   h1 > & {
     display: none;
@@ -217,15 +205,15 @@ $admonition-types: (
 }
 
 .admonition-title, .admonition %html-heading {
-  font-family: v.$headings-font-family;
+  font-family: $headings-font-family;
   color: inherit;
 }
 
 @each $type, $state in $admonition-types {
   $value: map-get($theme-colors, $state);
-  $alert-background: shift-color($value, v.$alert-bg-scale);
-  $alert-border: shift-color($value, v.$alert-border-scale);
-  $alert-color: shift-color($value, v.$alert-color-scale);
+  $alert-background: shift-color($value, $alert-bg-scale);
+  $alert-border: shift-color($value, $alert-border-scale);
+  $alert-color: shift-color($value, $alert-color-scale);
   @if (contrast-ratio($alert-background, $alert-color) < $min-contrast-ratio) {
     $alert-color: mix($value, color-contrast($alert-background), abs($alert-color-scale));
   }
@@ -235,16 +223,38 @@ $admonition-types: (
 }
 
 
-// Figures
+// Images and figures
 // =============================================================================
+
+.body section img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  &.align-left {
+    margin-left: 0;
+  }
+  &.align-right {
+    margin-right: 0;
+  }
+}
 
 figure {
   // Ensures the caption's text aligns with the image.
   display: inline-block;
-
-  img {
+  width: 100%;
+  > img, > a > img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     margin-bottom: $spacer * .5;
     line-height: 1;
+  }
+
+  &.align-left > img {
+    margin-left: 0;
+  }
+  &.align-right > img {
+    margin-right: 0;
   }
 }
 
@@ -265,12 +275,4 @@ figcaption {
   > ul {
     margin-bottom: 0;
   }
-}
-
-
-// Math
-// =============================================================================
-
-mjx-container {
-  font-size: 115% !important;
 }

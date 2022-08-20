@@ -1,6 +1,6 @@
-@use "bootstrap/bootstrap.scss";
+@import "bootstrap/bootstrap.scss";
 
-@use "fontfaces.scss";
-@use "document";
-@use "layout";
-@use "special_styles";
+@import "fontfaces.scss";
+@import "../../base/document";
+@import "../../base/layout";
+@import "../../base/special_styles";
