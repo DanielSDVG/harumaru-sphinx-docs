@@ -226,15 +226,18 @@ $admonition-types: (
 // Images and figures
 // =============================================================================
 
-.body section img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  &.align-left {
-    margin-left: 0;
-  }
-  &.align-right {
-    margin-right: 0;
+.body section {
+  img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    &.align-left {
+      margin-left: 0;
+    }
+    &.align-right {
+      margin-right: 0;
+    }
   }
 }
 

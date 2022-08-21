@@ -14,11 +14,12 @@ Here's an image:
 
 .. image:: /_static/logo.png
 
+.. image:: /_static/wide_image.png
+
 And this is a figure:
 
 .. figure:: /_static/logo.png
    :scale: 50 %
-   :alt: map to buried treasure
 
    This is the caption of the figure (a simple paragraph).
 
@@ -26,16 +27,19 @@ And this is a figure:
    case, the legend consists of this paragraph.
 
 .. figure:: /_static/logo.png
+   :scale: 50 %
    :align: left
 
    This is the caption of the figure (a simple paragraph).
 
 .. figure:: /_static/logo.png
+   :scale: 50 %
    :align: center
 
    This is the caption of the figure (a simple paragraph).
 
 .. figure:: /_static/logo.png
+   :scale: 50 %
    :align: right
 
    This is the caption of the figure (a simple paragraph).
