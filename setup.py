@@ -20,7 +20,7 @@ with open("README.rst") as f:
 
 setup(
     name="sphinx_harumaru_themes",
-    version="0.3.3",
+    version="0.4",
     author="DanielSDVG",
     author_email="danielsdvg@gmail.com",
     url="",

@@ -5,6 +5,9 @@ themes = [
     'haruki_light',
     'haruki_dark',
     'haruki_hw',
+    'daimaru_light',
+    'daimaru_dark',
+    'daimaru_hw',
 ]
 
 def setup(app):

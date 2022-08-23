@@ -1,0 +1,462 @@
+@import "../../../bootstrap/scss/functions.scss";
+
+// Base colors
+// =============================================================================
+
+$cyan:        #39ceff;
+$blue:        #2d4bff;
+$indigo:      #5c2ffd;
+$purple:      #a02ffd;
+$pink:        #ff00f2;
+$green:       #00df56;
+$yellow:      #ffc000;
+$red:         #ff2424;
+$orange:      #ff8914;
+
+$white:       #fff;
+$gray-100:    #f1f1f1;
+$gray-200:    #eeeeee;
+$gray-300:    #d8d8d8;
+$gray-400:    #bfbfbf;
+$gray-500:    #a9a9a9;
+$gray-600:    #888888;
+$gray-700:    #5b5b5b;
+$gray-800:    #424242;
+$gray-900:    #2a2a2a;
+$black:       #000;
+
+$primary:       $purple;
+$secondary:     $cyan;
+$success:       $green;
+$danger:        $red;
+$warning:       $yellow;
+$info:          $pink;
+$light:         $gray-100;
+$dark:          $gray-900;
+
+$primary-light:  $purple;
+
+
+// Color variations
+// =============================================================================
+
+$primary-300:   tint-color($primary, 60%);
+
+$primary-600:   shade-color($primary, 20%);
+$primary-700:   shade-color($primary, 40%);
+$primary-800:   shade-color($primary, 60%);
+$primary-850:   shade-color($primary, 70%);
+$primary-900:   shade-color($primary, 80%);
+$primary-950:   shade-color($primary, 90%);
+
+$secondary-300:   tint-color($secondary, 60%);
+
+$secondary-600:   shade-color($secondary, 20%);
+$secondary-700:   shade-color($secondary, 40%);
+$secondary-800:   shade-color($secondary, 60%);
+$secondary-850:   shade-color($secondary, 70%);
+$secondary-900:   shade-color($secondary, 80%);
+$secondary-950:   shade-color($secondary, 90%);
+
+$success-300:   tint-color($success, 60%);
+
+$success-600:   shade-color($success, 20%);
+$success-700:   shade-color($success, 40%);
+$success-800:   shade-color($success, 60%);
+$success-850:   shade-color($success, 70%);
+$success-900:   shade-color($success, 80%);
+$success-950:   shade-color($success, 90%);
+
+$danger-300:   tint-color($danger, 60%);
+
+$danger-600:   shade-color($danger, 20%);
+$danger-700:   shade-color($danger, 40%);
+$danger-800:   shade-color($danger, 60%);
+$danger-850:   shade-color($danger, 70%);
+$danger-900:   shade-color($danger, 80%);
+$danger-950:   shade-color($danger, 90%);
+
+$warning-300:   tint-color($warning, 60%);
+
+$warning-600:   shade-color($warning, 20%);
+$warning-700:   shade-color($warning, 40%);
+$warning-800:   shade-color($warning, 60%);
+$warning-850:   shade-color($warning, 70%);
+$warning-900:   shade-color($warning, 80%);
+$warning-950:   shade-color($warning, 90%);
+
+$info-300:   tint-color($info, 60%);
+
+$info-600:   shade-color($info, 20%);
+$info-700:   shade-color($info, 40%);
+$info-800:   shade-color($info, 60%);
+$info-850:   shade-color($info, 70%);
+$info-900:   shade-color($info, 80%);
+$info-950:   shade-color($info, 90%);
+
+$light-700:   shade-color($light, 40%);
+$light-800:   shade-color($light, 60%);
+$light-900:   shade-color($light, 80%);
+
+$dark-700:   shade-color($dark, 40%);
+$dark-800:   shade-color($dark, 60%);
+$dark-900:   shade-color($dark, 80%);
+
+
+$primary-light-200:   tint-color($primary-light, 60%);
+$primary-light-100:   tint-color($primary-light, 80%);
+
+
+// General styles
+// =============================================================================
+
+$body-bg:                 #0e0e0e;
+$body-color:              $gray-100;
+$link-color:              $cyan;
+$link-tint-percentage:    20%;
+$link-hover-color:        tint-color($link-color, $link-tint-percentage);
+$code-color:              $red;
+
+$border-color:            $primary-600;
+
+$box-shadow:              0 .5rem 1rem rgba($border-color, 0.3);
+$box-shadow-sm:           0 .125rem .25rem rgba($border-color, 0.15);
+$box-shadow-lg:           0 1rem 3rem rgba($border-color, 0.35);
+$box-shadow-inset:        inset 0 1px 2px rgba($border-color, 0.15);
+
+$component-active-color:  $white;
+$component-active-bg:     $primary-700;
+
+$font-family-sans-serif: "Nunito", system-ui, -apple-system, "Segoe UI",
+  Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
+  "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+$headings-font-family: $font-family-sans-serif;
+
+$mark-padding: 0;
+$mark-bg: rgba(255, 238, 0, 0.2);
+
+$hr-color: $primary;
+$hr-opacity: 0.5;
+
+$text-muted: $gray-700;
+$blockquote-footer-color: $text-muted;
+
+$disabled-color: $gray-700;
+
+
+// Accordion
+// =============================================================================
+
+$accordion-button-active-bg:      $primary-900;
+$accordion-border-color:          $border-color;
+$accordion-button-active-color:   $primary-300;
+
+
+// Alerts
+// =============================================================================
+
+$alert-bg-scale:                80%;
+$alert-border-scale:            70%;
+$alert-color-scale:             40%;
+
+
+// Badge
+// =============================================================================
+
+$badge-color: $black;
+
+
+// Breadcrumb
+// =============================================================================
+
+$breadcrumb-divider-color:      $primary;
+$breadcrumb-active-color:       $text-muted;
+
+
+// Button
+// =============================================================================
+
+$button-colors: (
+  "primary": (
+    "bg": $primary-700,
+    "color": $white,
+    "border": $primary
+  ),
+  "secondary": (
+    "bg": $secondary-700,
+    "color": $white,
+    "border": $secondary
+  ),
+  "success": (
+    "bg": $success-700,
+    "color": $white,
+    "border": $success
+  ),
+  "danger": (
+    "bg": $danger-700,
+    "color": $white,
+    "border": $danger
+  ),
+  "warning": (
+    "bg": $warning-700,
+    "color": $white,
+    "border": $warning
+  ),
+  "info": (
+    "bg": $info-700,
+    "color": $white,
+    "border": $info
+  ),
+  "light": (
+    "bg": $light-700,
+    "color": $black,
+    "border": $light
+  ),
+  "dark": (
+    "bg": $dark-700,
+    "color": $white,
+    "border": $dark
+  ),
+);
+
+$btn-hover-bg-shift-amount:     25%;
+$btn-active-bg-shift-amount:    30%;
+
+
+// Card
+// =============================================================================
+
+$card-colors: (
+  "primary": (
+    "headerbg": $primary-800,
+    "bg": $primary-900,
+    "outline": $primary
+  ),
+  "secondary": (
+    "headerbg": $secondary-800,
+    "bg": $secondary-900,
+    "outline": $secondary
+  ),
+  "success": (
+    "headerbg": $success-800,
+    "bg": $success-900,
+    "outline": $success
+  ),
+  "danger": (
+    "headerbg": $danger-800,
+    "bg": $danger-900,
+    "outline": $danger
+  ),
+  "warning": (
+    "headerbg": $warning-800,
+    "bg": $warning-900,
+    "outline": $warning
+  ),
+  "info": (
+    "headerbg": $info-800,
+    "bg": $info-900,
+    "outline": $info
+  ),
+  "light": (
+    "headerbg": $light-800,
+    "bg": $light-900,
+    "outline": $light
+  ),
+  "dark": (
+    "headerbg": $dark-800,
+    "bg": $dark-900,
+    "outline": $dark
+  ),
+);
+$card-border-color:                         $border-color;
+$card-cap-bg:                               $primary-950;
+$card-bg:                                   $body-bg;
+
+
+// Dropdown
+// =============================================================================
+
+$dropdown-bg:                               $body-bg;
+$dropdown-color:                            $body-color;
+$dropdown-border-color:                     $primary;
+$dropdown-divider-bg:                       $dropdown-border-color;
+$dropdown-link-color:                       $gray-200;
+$dropdown-link-hover-bg:                    $primary-900;
+$dropdown-link-active-bg:                   $primary-800;
+$dropdown-link-active-color:                $component-active-color;
+$dropdown-link-disabled-color:              $disabled-color;
+
+$dropdown-dark-bg:                          white;
+$dropdown-dark-color:                       $gray-900;
+$dropdown-dark-border-color:                $primary-light;
+$dropdown-dark-divider-bg:                  $primary-light;
+$dropdown-dark-link-hover-bg:               $primary-light-200;
+$dropdown-dark-link-active-color:           $white;
+$dropdown-dark-link-active-bg:              $primary-light-100;
+
+
+// Forms
+// =============================================================================
+
+$input-bg:                                  $body-bg;
+$input-color:                               $body-color;
+$input-disabled-bg:                         $gray-900;
+$input-border-color:                        $border-color;
+$input-placeholder-color:                   $gray-700;
+$input-focus-border-color:                  $primary-600;
+
+$form-text-color:                           $text-muted;
+
+$form-check-input-border:                   1px solid $border-color;
+$form-switch-color:                         $border-color;
+$form-check-input-checked-bg-color:         $primary-700;
+$form-check-input-indeterminate-bg-color:   $primary-700;
+
+$form-range-track-bg:                       $primary-900;
+$form-range-thumb-bg:                       $primary;
+$form-range-thumb-active-bg:                $primary-300;
+$form-range-thumb-disabled-bg:              $gray-700;
+
+$input-group-addon-color:                   $primary-300;
+$input-group-addon-bg:                      $primary-900;
+
+$form-file-button-color:                    $primary-300;
+$form-file-button-bg:                       $primary-900;
+$form-file-button-hover-bg:                 $primary-850;
+
+
+// List groups
+// =============================================================================
+
+$list-group-bg:                             $body-bg;
+$list-group-color:                          $body-color;
+$list-group-border-color:                   $border-color;
+$list-group-hover-bg:                       $primary-850;
+$list-group-disabled-color:                 $disabled-color;
+
+$list-group-action-color:                   $body-color;
+$list-group-action-hover-color:             $list-group-action-color;
+$list-group-action-active-color:            $body-color;
+$list-group-action-active-bg:               $primary-800;
+
+$list-group-colors: (
+  "primary": (
+    "bg": $primary-900,
+    "color": $primary-300
+  ),
+  "secondary": (
+    "bg": $secondary-900,
+    "color": $secondary-300
+  ),
+  "success": (
+    "bg": $success-900,
+    "color": $success-300
+  ),
+  "danger": (
+    "bg": $danger-900,
+    "color": $danger-300
+  ),
+  "warning": (
+    "bg": $warning-900,
+    "color": $warning-300
+  ),
+  "info": (
+    "bg": $info-900,
+    "color": $info-300
+  ),
+  "light": (
+    "bg": $light-900,
+    "color": $white
+  ),
+  "dark": (
+    "bg": $dark-900,
+    "color": $white
+  ),
+);
+
+
+// Modals
+// =============================================================================
+$modal-content-bg:                          $body-bg;
+$modal-content-color:                       $body-color;
+$modal-content-border-color:                $border-color;
+
+
+// Pagination
+// =============================================================================
+
+$pagination-bg:                             $body-bg;
+$pagination-border-color:                   $border-color;
+$pagination-hover-bg:                       $primary-850;
+$pagination-hover-border-color:             $border-color;
+$pagination-focus-bg:                       $pagination-hover-bg;
+$pagination-active-bg:                      $border-color;
+$pagination-disabled-bg:                    $gray-900;
+$pagination-disabled-color:                 $disabled-color;
+$pagination-disabled-border-color:          $border-color;
+
+
+// Navs & Tabs
+// =============================================================================
+
+$nav-tabs-border-color:                     $border-color;
+$nav-tabs-link-hover-border-color:          $border-color;
+$nav-tabs-link-active-bg:                   $body-bg;
+$nav-tabs-link-active-border-color:
+  $border-color $border-color $nav-tabs-link-active-bg;
+$nav-tabs-link-active-color:                $body-color;
+$nav-link-disabled-color:                   $disabled-color;
+
+$navbar-light-bg:                           $gray-200;
+$navbar-dark-bg:                            $gray-900;
+
+
+// Progress
+// =============================================================================
+
+$progress-bg:                               $gray-900;
+
+
+// Popovers
+// =============================================================================
+
+$popover-bg:                                $body-bg;
+$popover-border-color:                      $border-color;
+$popover-header-bg:                         rgba($primary, 10%);
+$popover-body-padding-y:                    .5rem;
+
+
+// Tables
+// =============================================================================
+
+$table-border-color:                        $border-color;
+$table-group-separator-color:               $primary;
+$table-striped-bg:                          rgba($primary, 10%);
+$table-bg-scale:                            80%;
+
+
+// Toasts
+// =============================================================================
+
+$toast-background-color:                    rgba($body-bg, 0.85);
+$toast-border-color:                        $border-color;
+$toast-header-color:                        $body-color;
+$toast-header-background-color:             $primary-900;
+$toast-header-border-color:                 $border-color;
+
+
+
+// =============================================================================
+// Sphinx documentation variables
+// =============================================================================
+
+$quote-color: tint-color($purple, 30%);
+$quote-color-700: shade-color($quote-color, 40%);
+
+$headings-color: tint-color($primary, 10%);
+
+$headerlink-color: $primary-800;
+$headerlink-hover-color: $primary-700;
+
+$footer-bg: $primary-950;
