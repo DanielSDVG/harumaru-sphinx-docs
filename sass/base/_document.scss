@@ -217,7 +217,7 @@ $admonition-types: (
   @include font-size($h5-font-size);
 }
 
-.admonition %html-heading, .admonition-title %extra-heading {
+.admonition %html-heading, .admonition %extra-heading {
   color: inherit;
 }
 
