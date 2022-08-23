@@ -8,6 +8,7 @@ themes = [
     'daimaru_light',
     'daimaru_dark',
     'daimaru_hw',
+    'erika_hw',
 ]
 
 def setup(app):
