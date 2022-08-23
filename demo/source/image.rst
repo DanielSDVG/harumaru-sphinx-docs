@@ -23,14 +23,21 @@ And this is a figure:
 
    This is the caption of the figure (a simple paragraph).
 
-   The legend consists of all elements after the caption.  In this
+   The legend consists of all elements after the caption. In this
    case, the legend consists of this paragraph.
+
+   And this other paragraph.
 
 .. figure:: /_static/logo.png
    :scale: 50 %
    :align: left
 
    This is the caption of the figure (a simple paragraph).
+
+   And here's an image inside a figure
+
+   .. image:: /_static/logo.png
+      :align: right
 
 .. figure:: /_static/logo.png
    :scale: 50 %

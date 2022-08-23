@@ -11965,15 +11965,15 @@ mark, .mark {
 .body section {
   margin-top: 2em;
 }
-.body > section {
-  margin-top: 0;
-}
-
 .body section > :not(:last-child) {
   margin-bottom: 1rem;
 }
 .body section > :last-child {
   margin-bottom: 0;
+}
+
+.body > section {
+  margin-top: 0;
 }
 
 .body li > :not(:last-child) {
@@ -12011,13 +12011,6 @@ mark, .mark {
   margin-bottom: 0;
 }
 
-.body figcaption > :not(:last-child) {
-  margin-bottom: 0.5rem;
-}
-.body figcaption > :last-child {
-  margin-bottom: 0;
-}
-
 .body figcaption > .legend > :not(:last-child) {
   margin-bottom: 0.5rem;
 }
@@ -12049,7 +12042,6 @@ mark, .mark {
 .body table.docutils {
   display: table;
   width: 100%;
-  margin-bottom: 1rem;
   vertical-align: top;
   border-color: #c682fe;
 }
@@ -12076,23 +12068,14 @@ mark, .mark {
   color: #902ae4;
 }
 
-.body h1:first-child, .body .h1:first-child {
-  text-align: center;
-  margin-bottom: 2rem;
-}
-
 .rubric {
-  margin-top: 2rem;
   font-size: calc(1.325rem + 0.9vw);
+  margin-top: 2rem;
 }
 @media (min-width: 1200px) {
   .rubric {
     font-size: 2rem;
   }
-}
-
-.admonition-title {
-  font-size: 1.25rem;
 }
 
 .headerlink {
@@ -12108,11 +12091,13 @@ h1 > .headerlink, .h1 > .headerlink {
   display: none;
 }
 
-.body li, .body dt, .body dd, .body th, .body td {
-  margin-bottom: 0.5rem;
+.body > :first-child > h1, .body > :first-child > .h1 {
+  text-align: center;
+  margin-bottom: 2rem;
 }
-.body li:last-child, .body dt:last-child, .body dd:last-child, .body th:last-child, .body td:last-child {
-  margin-bottom: 0;
+
+.body li:not(:last-child), .body dt:not(:last-child), .body dd:not(:last-child), .body th:not(:last-child), .body td:not(:last-child) {
+  margin-bottom: 0.5rem;
 }
 .body ul, .body ol, .body dd {
   padding-left: 2rem;
@@ -12153,13 +12138,15 @@ dl.field-list > dt.field-odd, dl.field-list > dt.field-even {
 .admonition {
   position: relative;
   padding: 1rem 1rem;
-  margin-bottom: 1rem;
   border: 1px solid transparent;
   border-radius: 0.25rem;
 }
 
-.admonition-title, .admonition h1, .admonition .h1, .admonition h2, .admonition .h2, .admonition h3, .admonition .h3, .admonition h4, .admonition .h4, .admonition h5, .admonition .h5, .admonition h6, .admonition .h6 {
-  font-family: "Nunito", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+.admonition-title {
+  font-size: 1.25rem;
+}
+
+.admonition h1, .admonition .h1, .admonition h2, .admonition .h2, .admonition h3, .admonition .h3, .admonition h4, .admonition .h4, .admonition h5, .admonition .h5, .admonition h6, .admonition .h6, .admonition-title .rubric, .admonition-title .admonition-title {
   color: inherit;
 }
 
@@ -12235,40 +12222,46 @@ dl.field-list > dt.field-odd, dl.field-list > dt.field-even {
   color: #523e00;
 }
 
-.body section img {
+figure {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+}
+figure.align-left {
+  text-align: left;
+}
+figure.align-left img {
+  margin-left: 0;
+}
+figure.align-right {
+  text-align: right;
+}
+figure.align-right img {
+  margin-right: 0;
+}
+
+.body img, .body .legend img {
   display: block;
   margin-left: auto;
   margin-right: auto;
   max-width: 100%;
-}
-.body section img.align-left {
-  margin-left: 0;
-}
-.body section img.align-right {
-  margin-right: 0;
-}
-
-figure {
-  display: inline-block;
-  width: 100%;
-}
-figure > img, figure > a > img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 0.5rem;
   line-height: 1;
 }
-figure.align-left > img {
+.body img.align-left, .body .legend img.align-left {
   margin-left: 0;
 }
-figure.align-right > img {
+.body img.align-right, .body .legend img.align-right {
   margin-right: 0;
 }
 
 figcaption {
   font-size: 0.875em;
   color: #888888;
+  margin-top: 0.5rem;
+}
+
+.legend {
+  text-align: left;
 }
 
 .toctree-wrapper > .caption {

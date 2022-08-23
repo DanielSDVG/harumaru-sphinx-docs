@@ -6,7 +6,6 @@
 $container-elements:
   li, dd, th, td,
   blockquote,
-  figcaption,
   unquote("figcaption > .legend"),
   unquote("blockquote > div"),
   unquote(".admonition"),
@@ -16,24 +15,32 @@ $section-margin-top: 2em;
 $paragraph-margin: 1rem;
 $sub-paragraph-margin: 0.5rem;
 
-.body {
-  section {
-    margin-top: $section-margin-top;
-  }
-  > section {
-    margin-top: 0;
-  }
-}
+
+// Sections
+// =============================================================================
 
 .body section {
+
+  // Add margin before each section
+  margin-top: $section-margin-top;
+
+  // Add margin between direct children in each section
   > :not(:last-child) {
     margin-bottom: $paragraph-margin;
   }
   > :last-child {
     margin-bottom: 0;
   }
+
 }
 
+// Do not add margin before the first section
+.body > section {
+  margin-top: 0;
+}
+
+// For each element that may contain block elements,
+// set margins between children
 @each $container in $container-elements {
   .body #{$container} {
     > :not(:last-child) {
@@ -53,7 +60,6 @@ $sub-paragraph-margin: 0.5rem;
   // @extend .table
   display: table;
   width: 100%;
-  margin-bottom: $spacer;
   vertical-align: $table-cell-vertical-align;
   border-color: $table-border-color;
   > :not(caption) > * > * {
@@ -91,20 +97,10 @@ h1, h2, h3, h4, h5, h6 {
   color: $headings-color;
 }
 
-.body h1:first-child {
-  text-align: center;
-  margin-bottom: 2 * $paragraph-margin;
-}
-
 .rubric {
   @extend %extra-heading;
-  margin-top: 2 * $paragraph-margin;
   @include font-size($h2-font-size);
-}
-
-.admonition-title {
-  @extend %extra-heading;
-  @include font-size($h5-font-size);
+  margin-top: 2 * $paragraph-margin;
 }
 
 .headerlink {
@@ -120,27 +116,37 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+.body > :first-child > h1 {
+  text-align: center;
+  margin-bottom: 2 * $paragraph-margin;
+}
+
 // Lists
 // =============================================================================
 
 $list-indent: 2rem;
 
 .body {
+
+  // Spacing between lists
   li, dt, dd, th, td {
-    margin-bottom: $sub-paragraph-margin;
-    &:last-child {
-      margin-bottom: 0;
+    &:not(:last-child) {
+      margin-bottom: $sub-paragraph-margin;
     }
   }
+
+  // Indentation
   ul, ol, dd {
     padding-left: $list-indent;
   }
+
   dt {
     color: $quote-color;
   }
   dd > ul:only-child, dd > ol:only-child {
     padding-left: 0;
   }
+
 }
 
 
@@ -163,10 +169,12 @@ blockquote {
 // Footnotes
 // =============================================================================
 
+// Spacing between footnotes
 .footnote:not(:last-child) {
   margin-bottom: $sub-paragraph-margin;
 }
 
+// Make labels float
 .footnote > .label {
   float: left;
   padding-right: 0.5em;
@@ -181,6 +189,7 @@ dl.field-list {
     color: $quote-color-700;
   }
 }
+
 
 // Admonitions
 // =============================================================================
@@ -199,13 +208,16 @@ $admonition-types: (
 .admonition {
   position: relative;
   padding: $alert-padding-y $alert-padding-x;
-  margin-bottom: $alert-margin-bottom;
   border: $alert-border-width solid transparent;
   @include border-radius($alert-border-radius);
 }
 
-.admonition-title, .admonition %html-heading {
-  font-family: $headings-font-family;
+.admonition-title {
+  @extend %extra-heading;
+  @include font-size($h5-font-size);
+}
+
+.admonition %html-heading, .admonition-title %extra-heading {
   color: inherit;
 }
 
@@ -226,12 +238,31 @@ $admonition-types: (
 // Images and figures
 // =============================================================================
 
-.body section {
-  img {
+figure {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  &.align-left {
+    text-align: left;
+    img {
+      margin-left: 0;
+    }
+  }
+  &.align-right {
+    text-align: right;
+    img {
+      margin-right: 0;
+    }
+  }
+}
+
+.body {
+  img, .legend img {
     display: block;
     margin-left: auto;
     margin-right: auto;
     max-width: 100%;
+    line-height: 1;
     &.align-left {
       margin-left: 0;
     }
@@ -241,29 +272,14 @@ $admonition-types: (
   }
 }
 
-figure {
-  // Ensures the caption's text aligns with the image.
-  display: inline-block;
-  width: 100%;
-  > img, > a > img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: $spacer * .5;
-    line-height: 1;
-  }
-
-  &.align-left > img {
-    margin-left: 0;
-  }
-  &.align-right > img {
-    margin-right: 0;
-  }
-}
 
 figcaption {
   @include font-size($figure-caption-font-size);
   color: $figure-caption-color;
+  margin-top: $sub-paragraph-margin;
+}
+.legend {
+  text-align: left;
 }
 
 
