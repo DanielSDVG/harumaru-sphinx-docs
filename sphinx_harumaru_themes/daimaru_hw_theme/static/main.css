@@ -12343,6 +12343,42 @@ mjx-container {
   font-size: 115% !important;
 }
 
+@media print {
+  #sidebar-container, #navbar, #document > :not(.body) {
+    display: none !important;
+  }
+
+  #main-container {
+    margin: 0;
+    padding: 0;
+  }
+  #main-container > .row {
+    padding-top: 0;
+  }
+
+  #page-footer {
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    border-top: 1px solid #c682fe;
+    background-color: transparent;
+  }
+
+  body {
+    font-size: 8.5pt;
+  }
+
+  img, figure {
+    page-break-inside: avoid;
+  }
+
+  h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, .rubric {
+    page-break-after: avoid;
+  }
+}
+@page {
+  margin: 1cm 2.5cm;
+}
 ul.plus > li::marker {
   color: #12b14f;
   content: "+ ";

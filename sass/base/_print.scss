@@ -1,0 +1,39 @@
+@media print {
+
+  // Hide unnecessary elements
+  #sidebar-container, #navbar, #document > :not(.body) {
+    display: none !important;
+  }
+
+  #main-container {
+    margin: 0;
+    padding: 0;
+    > .row {
+      padding-top: 0;
+    }
+  }
+
+  #page-footer {
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    border-top: $border-width solid $border-color;
+    background-color: transparent;
+  }
+
+  body {
+    font-size: $font-size-print;
+  }
+
+  img, figure, blockquote {
+    page-break-inside: avoid;
+  }
+  h1, h2, h3, h4, h5, h6, .rubric {
+    page-break-after: avoid;
+  }
+
+}
+
+@page {
+  margin: 1cm 2.5cm;
+}
