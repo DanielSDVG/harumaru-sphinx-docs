@@ -128,7 +128,7 @@ $list-indent: 2rem;
 
 .body {
 
-  // Spacing between lists
+  // Spacing between list items
   li, dt, dd, th, td {
     &:not(:last-child) {
       margin-bottom: $sub-paragraph-margin;
@@ -287,11 +287,34 @@ figcaption {
 // =============================================================================
 
 .toctree-wrapper {
+  
   > .caption {
     font-weight: bold;
     margin-bottom: $sub-paragraph-margin;
   }
+
   > ul {
+    border-left: $border-width solid $border-color
+  }
+  > ul, li:not(:last-child) {
     margin-bottom: 0;
   }
+
+  li {
+    list-style-type: square;
+  }
+  li::marker {
+    color: $toctree-l1-bullet-color
+  }
+
+  .toctree-l1::marker {
+    color: $toctree-l1-bullet-color
+  }
+  .toctree-l2::marker {
+    color: $toctree-l2-bullet-color
+  }
+  .toctree-l3::marker {
+    color: $toctree-l3-bullet-color
+  }
+
 }

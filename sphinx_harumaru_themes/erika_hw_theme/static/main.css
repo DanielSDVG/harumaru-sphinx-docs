@@ -12269,7 +12269,25 @@ figcaption {
   margin-bottom: 0.5rem;
 }
 .toctree-wrapper > ul {
+  border-left: 1px solid #71d095;
+}
+.toctree-wrapper > ul, .toctree-wrapper li:not(:last-child) {
   margin-bottom: 0;
+}
+.toctree-wrapper li {
+  list-style-type: square;
+}
+.toctree-wrapper li::marker {
+  color: #12b14f;
+}
+.toctree-wrapper .toctree-l1::marker {
+  color: #12b14f;
+}
+.toctree-wrapper .toctree-l2::marker {
+  color: #ffc000;
+}
+.toctree-wrapper .toctree-l3::marker {
+  color: #ff9933;
 }
 
 body {

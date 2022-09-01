@@ -4,7 +4,7 @@ Harumaru Sphinx Themes Demo Documentation
 Here you can preview this theme!
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 4
    :caption: Contents:
 
    inline_markup
