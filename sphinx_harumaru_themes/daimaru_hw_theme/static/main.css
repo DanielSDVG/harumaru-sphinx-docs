@@ -12364,6 +12364,8 @@ mjx-container {
   #main-container {
     margin: 0;
     padding: 0;
+    width: 100%;
+    max-width: none;
   }
   #main-container > .row {
     padding-top: 0;
@@ -12371,6 +12373,7 @@ mjx-container {
 
   body {
     font-size: 8.5pt;
+    display: block;
   }
 
   img, figure, blockquote {
@@ -12382,7 +12385,40 @@ mjx-container {
   }
 }
 @page {
-  margin: 1cm 2.5cm;
+  margin: 2cm 2.5cm;
+  @top-left {
+    content: var(--sphinx-author);
+    font-family: "Short Stack Ext", "Short Stack", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 8.5pt;
+    color: #902ae4;
+    width: 50%;
+    margin-bottom: 0.2cm;
+    padding-bottom: 0.2cm;
+    border-bottom: 1px solid #a02ffd;
+    vertical-align: bottom;
+  }
+  @top-right {
+    content: var(--sphinx-project);
+    font-family: "Short Stack Ext", "Short Stack", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 8.5pt;
+    color: #902ae4;
+    width: 50%;
+    margin-bottom: 0.2cm;
+    padding-bottom: 0.2cm;
+    border-bottom: 1px solid #a02ffd;
+    vertical-align: bottom;
+  }
+  @bottom-center {
+    content: counter(page);
+    font-family: "Short Stack Ext", "Short Stack", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 8.5pt;
+    color: #902ae4;
+    width: 100%;
+    margin-top: 0.2cm;
+    padding-top: 0.2cm;
+    border-top: 1px solid #a02ffd;
+    vertical-align: top;
+  }
 }
 ul.plus > li::marker {
   color: #12b14f;

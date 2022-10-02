@@ -203,6 +203,13 @@
     {%- endif %}
   {%- endblock %}
 
+  <style>
+    :root {
+      --sphinx-author: "{{ copyright }}";
+      --sphinx-project: "{{ project }}";
+    }
+  </style>
+
   {%- block extrahead %} {% endblock %}
 </head>
 

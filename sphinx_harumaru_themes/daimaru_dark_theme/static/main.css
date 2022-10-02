@@ -12360,6 +12360,8 @@ body {
   #main-container {
     margin: 0;
     padding: 0;
+    width: 100%;
+    max-width: none;
   }
   #main-container > .row {
     padding-top: 0;
@@ -12367,6 +12369,7 @@ body {
 
   body {
     font-size: 8.5pt;
+    display: block;
   }
 
   img, figure, blockquote {
@@ -12378,7 +12381,40 @@ body {
   }
 }
 @page {
-  margin: 1cm 2.5cm;
+  margin: 2cm 2.5cm;
+  @top-left {
+    content: var(--sphinx-author);
+    font-family: "Nunito", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 8.5pt;
+    color: #aa44fd;
+    width: 50%;
+    margin-bottom: 0.2cm;
+    padding-bottom: 0.2cm;
+    border-bottom: 1px solid #a02ffd;
+    vertical-align: bottom;
+  }
+  @top-right {
+    content: var(--sphinx-project);
+    font-family: "Nunito", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 8.5pt;
+    color: #aa44fd;
+    width: 50%;
+    margin-bottom: 0.2cm;
+    padding-bottom: 0.2cm;
+    border-bottom: 1px solid #a02ffd;
+    vertical-align: bottom;
+  }
+  @bottom-center {
+    content: counter(page);
+    font-family: "Nunito", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 8.5pt;
+    color: #aa44fd;
+    width: 100%;
+    margin-top: 0.2cm;
+    padding-top: 0.2cm;
+    border-top: 1px solid #a02ffd;
+    vertical-align: top;
+  }
 }
 ul.plus > li::marker {
   color: #00df56;
