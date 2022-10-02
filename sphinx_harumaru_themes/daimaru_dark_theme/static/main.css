@@ -12078,6 +12078,10 @@ mark, .mark {
   }
 }
 
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, .admonition-title, .rubric {
+  page-break-after: avoid;
+}
+
 .headerlink {
   padding-left: 0.5em;
   color: #401365;
@@ -12222,6 +12226,11 @@ dl.field-list > dt.field-odd, dl.field-list > dt.field-even {
   color: #ccb87a;
 }
 
+img {
+  max-width: 100%;
+  height: auto !important;
+}
+
 figure {
   display: inline-block;
   width: 100%;
@@ -12244,7 +12253,6 @@ figure.align-right img {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  max-width: 100%;
   line-height: 1;
 }
 .body img.align-left, .body .legend img.align-left {
@@ -12340,7 +12348,12 @@ body {
 }
 
 @media print {
-  #sidebar-container, #navbar, #document > :not(.body) {
+  #sidebar-container,
+.offcanvas-backdrop,
+#sidebar-offcanvas,
+#navbar,
+#page-footer,
+#document > :not(.body) {
     display: none !important;
   }
 
@@ -12352,19 +12365,11 @@ body {
     padding-top: 0;
   }
 
-  #page-footer {
-    padding-bottom: 0;
-    padding-left: 0;
-    padding-right: 0;
-    border-top: 1px solid #8026ca;
-    background-color: transparent;
-  }
-
   body {
     font-size: 8.5pt;
   }
 
-  img, figure {
+  img, figure, blockquote {
     page-break-inside: avoid;
   }
 

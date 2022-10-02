@@ -16,6 +16,8 @@ Here's an image:
 
 .. image:: /_static/wide_image.png
 
+.. image:: /_static/very_big_image.png
+
 And this is a figure:
 
 .. figure:: /_static/logo.png
@@ -46,6 +48,12 @@ And this is a figure:
    This is the caption of the figure (a simple paragraph).
 
 .. figure:: /_static/logo.png
+   :scale: 50 %
+   :align: right
+
+   This is the caption of the figure (a simple paragraph).
+
+.. figure:: /_static/very_big_image.png
    :scale: 50 %
    :align: right
 

@@ -1,7 +1,12 @@
 @media print {
 
   // Hide unnecessary elements
-  #sidebar-container, #navbar, #document > :not(.body) {
+  #sidebar-container,
+  .offcanvas-backdrop,
+  #sidebar-offcanvas,
+  #navbar,
+  #page-footer,
+  #document > :not(.body) {
     display: none !important;
   }
 
@@ -11,14 +16,6 @@
     > .row {
       padding-top: 0;
     }
-  }
-
-  #page-footer {
-    padding-bottom: 0;
-    padding-left: 0;
-    padding-right: 0;
-    border-top: $border-width solid $border-color;
-    background-color: transparent;
   }
 
   body {
