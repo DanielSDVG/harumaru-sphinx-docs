@@ -36,6 +36,11 @@
             "type": "shell",
             "command": ".vscode\\build_all",
             "group": "build",
+        }, {
+            "label": "WeasyPrint test page",
+            "type": "shell",
+            "command": ".vscode\\weasyprint_test",
+            "group": "build",
         }
     ]
 }
