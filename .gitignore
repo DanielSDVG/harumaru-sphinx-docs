@@ -155,3 +155,4 @@ cython_debug/
 demo/build
 sass/bootstrap
 *.pdf
+*.log

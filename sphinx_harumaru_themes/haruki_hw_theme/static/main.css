@@ -11137,14 +11137,6 @@ body {
   color: inherit;
 }
 
-@media print {
-  html, body {
-    font-size: 10pt;
-  }
-}
-@page {
-  margin: 1cm 1.5cm;
-}
 mark, .mark {
   color: inherit;
 }
@@ -11960,7 +11952,7 @@ mark, .mark {
   font-family: "Short Stack Ext";
   font-weight: bold;
   font-style: italic;
-  src: url("fonts/shortstack-ext/shortstack-ext-i.ttf") format("truetype");
+  src: url("fonts/shortstack-ext/shortstack-ext-bi.ttf") format("truetype");
 }
 .body section {
   margin-top: 2em;

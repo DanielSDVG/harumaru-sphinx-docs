@@ -1,6 +1,8 @@
-@import "bootstrap/bootstrap.scss";
+@import "_variables";
+@import "../../bootstrap/scss/bootstrap";
+@import "../../base/overrides";
 
-@import "fontfaces.scss";
+@import "../../base/fontfaces";
 @import "../../base/document";
 @import "../../base/layout";
 @import "../../base/print";

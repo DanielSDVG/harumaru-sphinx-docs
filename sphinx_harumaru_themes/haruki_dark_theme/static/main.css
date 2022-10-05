@@ -11137,14 +11137,6 @@ body {
   color: inherit;
 }
 
-@media print {
-  html, body {
-    font-size: 10pt;
-  }
-}
-@page {
-  margin: 1cm 1.5cm;
-}
 mark, .mark {
   color: inherit;
 }

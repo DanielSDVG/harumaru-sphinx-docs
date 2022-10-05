@@ -1,4 +1,4 @@
-@import "../../../bootstrap/scss/functions.scss";
+@import "../../bootstrap/scss/functions.scss";
 
 // Base colors
 // =============================================================================
@@ -25,16 +25,16 @@ $gray-800:      #424242;
 $gray-900:      #2a2a2a;
 $black:         #000;
 
-$primary:       $cyan;
-$secondary:     $pink;
+$primary:       $purple;
+$secondary:     $cyan;
 $success:       $green;
 $danger:        $red;
 $warning:       $yellow;
-$info:          $purple;
+$info:          $pink;
 $light:         $gray-100;
 $dark:          $gray-900;
 
-$primary-dark:  #2d8bff;
+$primary-dark:  $purple;
 
 
 // Color variations
@@ -464,7 +464,7 @@ $headerlink-hover-color: $primary-400;
 $footer-bg: $primary-100;
 
 $toctree-l1-bullet-color: $primary;
-$toctree-l2-bullet-color: $purple;
-$toctree-l3-bullet-color: $pink;
+$toctree-l2-bullet-color: $pink;
+$toctree-l3-bullet-color: $cyan;
 
 $font-size-print: 8.5pt;
