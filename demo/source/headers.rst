@@ -3,7 +3,7 @@
 Header Test
 =======================
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rutrum purus quis nisi blandit, eget aliquam turpis convallis. Nunc sit amet libero lacus. Integer fermentum mollis ante a tempor. Duis pretium nisl vitae nibh gravida, eu maximus nibh lobortis. Nulla arcu ipsum, dignissim in massa non, cursus tincidunt metus. In id commodo metus. Etiam semper ipsum felis, vitae lacinia neque euismod malesuada. Aenean pulvinar semper velit, vel consectetur lacus placerat quis. In finibus orci at augue volutpat sodales eget vitae nunc. Maecenas ullamcorper, nisl ut scelerisque pulvinar, nibh nisi dapibus orci, at tempor mi ipsum vel metus. Reference to the :ref:`first header <header-test>`.
+**Lorem ipsum dolor sit amet,** *consectetur adipiscing elit.* Sed rutrum purus quis nisi blandit, eget aliquam turpis convallis. Nunc sit amet libero lacus. Integer fermentum mollis ante a tempor. Duis pretium nisl vitae nibh gravida, eu maximus nibh lobortis. Nulla arcu ipsum, dignissim in massa non, cursus tincidunt metus. In id commodo metus. Etiam semper ipsum felis, vitae lacinia neque euismod malesuada. Aenean pulvinar semper velit, vel consectetur lacus placerat quis. In finibus orci at augue volutpat sodales eget vitae nunc. Maecenas ullamcorper, nisl ut scelerisque pulvinar, nibh nisi dapibus orci, at tempor mi ipsum vel metus. Reference to the :ref:`first header <header-test>`.
 
 
 Level 2 header
@@ -27,6 +27,16 @@ Level 5 header
 ;;;;;;;;;;;;;;
 
 Aenean rutrum efficitur turpis, a dictum libero. Integer dolor nisi, bibendum posuere egestas a, iaculis et mauris. Donec sit amet nunc urna. Proin pretium interdum fermentum. Quisque vehicula vulputate augue, at dignissim risus. Donec ultrices augue id lorem ultricies consectetur. Vestibulum quam mi, rhoncus ac aliquet at, feugiat vel justo. Quisque mattis gravida ultrices.
+
+.. code-block:: python
+
+   def factorial(n: int) -> int:
+      if n < 0:
+         raise ValueError("n must be non-negative")
+      elif n == 0:
+         return 1
+      else:
+         return n * factorial(n - 1)
 
 
 Level 6 header

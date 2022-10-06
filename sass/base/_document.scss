@@ -186,8 +186,23 @@ blockquote {
 }
 
 
+// Code listings
+// =============================================================================
+
+.highlight {
+  background-color: $body-bg;
+  border: 1px solid $border-color;
+  border-radius: $border-radius;
+  padding: 0.75em;
+  > pre {
+    margin: 0;
+  }
+}
+
+
 // Field lists
 // =============================================================================
+
 dl.field-list {
   > dt.field-odd, > dt.field-even {
     color: $quote-color-700;

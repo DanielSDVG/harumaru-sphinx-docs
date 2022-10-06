@@ -45,6 +45,9 @@
     }
     
     // Add sources for different formats
+    @if map.has-key($properties, "local") {
+        $src: $src, local(map.get($properties, "local"));
+    }
     @if map.has-key($properties, "eot") {
         $url: $base-url + "/" + map.get($properties, "eot");
         $src: $src, url($url);

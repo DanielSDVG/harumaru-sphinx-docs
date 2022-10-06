@@ -41,6 +41,11 @@
             "type": "shell",
             "command": ".vscode\\weasyprint_test",
             "group": "build",
+        }, {
+            "label": "Transpile Sass for Demo Project",
+            "type": "shell",
+            "command": ".vscode\\demo_compile",
+            "group": "build",
         }
     ]
 }

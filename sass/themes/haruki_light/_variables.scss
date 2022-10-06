@@ -128,11 +128,7 @@ $box-shadow-inset:        inset 0 1px 2px rgba($border-color, 0.15);
 $component-active-color:  $black;
 $component-active-bg:     $primary-300;
 
-$font-family-sans-serif: "Nunito", system-ui, -apple-system, "Segoe UI",
-  Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
-  "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-
-$headings-font-family: $font-family-sans-serif;
+@import "../../base/font_stack";
 
 $mark-padding: 0;
 $mark-bg: rgba(255, 238, 0, 0.3);
