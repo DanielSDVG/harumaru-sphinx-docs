@@ -10839,7 +10839,8 @@ body {
 #sidebar-offcanvas,
 #navbar,
 #page-footer,
-#document > :not(.body) {
+#document > :not(.body),
+.headerlink {
     display: none !important;
   }
 
