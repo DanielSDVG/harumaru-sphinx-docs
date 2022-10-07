@@ -10847,6 +10847,10 @@ mjx-container {
     display: none !important;
   }
 
+  body, .row {
+    display: block;
+  }
+
   #main-container {
     margin: 0;
     padding: 0;
