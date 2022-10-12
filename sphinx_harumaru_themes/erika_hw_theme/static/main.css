@@ -10576,6 +10576,11 @@ h1 > .headerlink, .h1 > .headerlink {
   margin-bottom: 2rem;
 }
 
+#print-subtitle {
+  color: #109f47;
+  font-size: 130%;
+}
+
 .body li:not(:last-child), .body dt:not(:last-child), .body dd:not(:last-child), .body th:not(:last-child), .body td:not(:last-child) {
   margin-bottom: 0.5rem;
 }
@@ -10873,6 +10878,15 @@ mjx-container {
 
   h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, .rubric {
     page-break-after: avoid;
+  }
+
+  h1::after, .h1::after {
+    content: "- " var(--sphinx-project) " -";
+    display: block;
+    font-family: "Short Stack Ext", "Short Stack", "Segoe UI", sans-serif;
+    font-size: 50%;
+    margin-top: 0.5em;
+    letter-spacing: 0.2em;
   }
 }
 @page {
