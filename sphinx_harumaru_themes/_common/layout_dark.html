@@ -203,8 +203,8 @@
 
   <style>
     :root {
-      --sphinx-author: "\00a9 {{ copyright }}";
-      --sphinx-project: "{{ project }}";
+      --sphinx-author: "\a9 \a0 {{ copyright|replace('\\', '\\\\')|replace('"', '\\"') }}";
+      --sphinx-project: "{{ project|replace('\\', '\\\\')|replace('"', '\\"') }}";
     }
   </style>
 
