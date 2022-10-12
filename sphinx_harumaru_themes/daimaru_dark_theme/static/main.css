@@ -9602,27 +9602,27 @@ mark, .mark {
 }
 
 h1, .h1 {
-  font-size: 300%;
-}
-
-h2, .h2 {
   font-size: 250%;
 }
 
-h3, .h3 {
+h2, .h2 {
   font-size: 200%;
 }
 
-h4, .h4 {
+h3, .h3 {
   font-size: 150%;
 }
 
-h5, .h5 {
+h4, .h4 {
   font-size: 140%;
 }
 
-h6, .h6 {
+h5, .h5 {
   font-size: 120%;
+}
+
+h6, .h6 {
+  font-size: 110%;
 }
 
 .alert hr {
