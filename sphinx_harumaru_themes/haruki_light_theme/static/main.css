@@ -10922,6 +10922,7 @@ body {
   }
 }
 @page :first {
+  margin: 1cm 2.5cm 2cm;
   @top-left {
     content: none;
   }
