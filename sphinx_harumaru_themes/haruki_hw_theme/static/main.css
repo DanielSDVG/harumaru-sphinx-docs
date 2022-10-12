@@ -10911,6 +10911,14 @@ mjx-container {
     vertical-align: top;
   }
 }
+@page :first {
+  @top-left {
+    content: none;
+  }
+  @top-right {
+    content: none;
+  }
+}
 ul.plus > li::marker {
   color: #12b14f;
   content: "+ ";

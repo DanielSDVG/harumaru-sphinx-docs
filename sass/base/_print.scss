@@ -81,3 +81,15 @@
   }
 
 }
+
+@page :first {
+
+  @top-left {
+    content: none;
+  }
+
+  @top-right {
+    content: none;
+  }
+
+}
